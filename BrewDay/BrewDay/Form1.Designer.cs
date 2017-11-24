@@ -41,6 +41,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ExitIcon = new System.Windows.Forms.PictureBox();
             this.BrowseRecipesPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,28 +50,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.RecipeListPanel = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.addRec = new System.Windows.Forms.Button();
             this.EditFavs = new System.Windows.Forms.Button();
             this.ModRec = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.IngListPanel = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.ExitIcon = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
             this.BrowseRecipesPanel.SuspendLayout();
             this.WhatShouldIBrwPanel.SuspendLayout();
             this.RecipeListPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.IngListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPanel
@@ -172,6 +172,13 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // ExitIcon
+            // 
+            resources.ApplyResources(this.ExitIcon, "ExitIcon");
+            this.ExitIcon.Name = "ExitIcon";
+            this.ExitIcon.TabStop = false;
+            this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // BrowseRecipesPanel
             // 
             this.BrowseRecipesPanel.BackColor = System.Drawing.Color.Cornsilk;
@@ -232,16 +239,6 @@
             resources.ApplyResources(this.RecipeListPanel, "RecipeListPanel");
             this.RecipeListPanel.Name = "RecipeListPanel";
             // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.addRec);
@@ -271,6 +268,16 @@
             this.ModRec.Name = "ModRec";
             this.ModRec.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
             // IngListPanel
             // 
             this.IngListPanel.BackColor = System.Drawing.Color.Cornsilk;
@@ -280,28 +287,21 @@
             resources.ApplyResources(this.IngListPanel, "IngListPanel");
             this.IngListPanel.Name = "IngListPanel";
             // 
-            // label8
+            // label10
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
-            // label10
+            // label8
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // ExitIcon
-            // 
-            resources.ApplyResources(this.ExitIcon, "ExitIcon");
-            this.ExitIcon.Name = "ExitIcon";
-            this.ExitIcon.TabStop = false;
-            this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Form1
             // 
@@ -321,6 +321,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
             this.BrowseRecipesPanel.ResumeLayout(false);
             this.BrowseRecipesPanel.PerformLayout();
             this.WhatShouldIBrwPanel.ResumeLayout(false);
@@ -330,7 +331,6 @@
             this.panel6.ResumeLayout(false);
             this.IngListPanel.ResumeLayout(false);
             this.IngListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
