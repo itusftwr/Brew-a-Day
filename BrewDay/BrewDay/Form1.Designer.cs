@@ -103,6 +103,9 @@
             // 
             this.ingredi.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.ingredi, "ingredi");
+            this.ingredi.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ingredi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ingredi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
             this.ingredi.ForeColor = System.Drawing.Color.Khaki;
             this.ingredi.Name = "ingredi";
             this.ingredi.UseVisualStyleBackColor = false;
@@ -112,6 +115,9 @@
             // 
             this.reclist.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.reclist, "reclist");
+            this.reclist.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.reclist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.reclist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
             this.reclist.ForeColor = System.Drawing.Color.Khaki;
             this.reclist.Name = "reclist";
             this.reclist.UseVisualStyleBackColor = false;
@@ -121,6 +127,9 @@
             // 
             this.wsibt.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.wsibt, "wsibt");
+            this.wsibt.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.wsibt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.wsibt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
             this.wsibt.ForeColor = System.Drawing.Color.Khaki;
             this.wsibt.Name = "wsibt";
             this.wsibt.UseVisualStyleBackColor = false;
@@ -130,6 +139,9 @@
             // 
             this.brwsrec.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.brwsrec, "brwsrec");
+            this.brwsrec.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.brwsrec.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.brwsrec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
             this.brwsrec.ForeColor = System.Drawing.Color.Khaki;
             this.brwsrec.Name = "brwsrec";
             this.brwsrec.UseVisualStyleBackColor = false;
@@ -139,6 +151,9 @@
             // 
             this.curbrewing.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.curbrewing, "curbrewing");
+            this.curbrewing.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.curbrewing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.curbrewing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OliveDrab;
             this.curbrewing.ForeColor = System.Drawing.Color.Khaki;
             this.curbrewing.Name = "curbrewing";
             this.curbrewing.UseVisualStyleBackColor = false;
@@ -307,6 +322,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.IngListPanel);
             this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.WhatShouldIBrwPanel);

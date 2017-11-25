@@ -27,15 +27,6 @@ namespace BrewDay
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -64,7 +55,7 @@ namespace BrewDay
         {
 
         }
-
+        //Browse Reicpe Button Clikc
         private void brwsrec_Click(object sender, EventArgs e)
         {
             BrowseRecipesPanel.Visible = true;
@@ -72,6 +63,9 @@ namespace BrewDay
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = false;
         }
+
+
+
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -82,7 +76,7 @@ namespace BrewDay
         {
 
         }
-
+        //What Should I brew Today button click
         private void wsibt_Click(object sender, EventArgs e)
         {
             BrowseRecipesPanel.Visible = false;
@@ -90,7 +84,7 @@ namespace BrewDay
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = false;
         }
-
+        //Recipe List button click
         private void reclist_Click(object sender, EventArgs e)
         {
             BrowseRecipesPanel.Visible = false;
@@ -103,5 +97,6 @@ namespace BrewDay
         {
             System.Windows.Forms.Application.Exit();
         }
+
     }
 }
