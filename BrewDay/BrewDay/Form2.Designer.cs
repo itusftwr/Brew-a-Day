@@ -47,7 +47,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.PasswordBox);
             this.panel1.Controls.Add(this.UsernameBox);
             this.panel1.Controls.Add(this.label3);
@@ -111,6 +111,7 @@
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // LoginButton
             // 

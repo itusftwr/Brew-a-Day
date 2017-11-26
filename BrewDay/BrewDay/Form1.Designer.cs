@@ -60,6 +60,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.login = new System.Windows.Forms.LinkLabel();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -183,6 +184,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Controls.Add(this.login);
             this.panel2.Controls.Add(this.ExitIcon);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
@@ -318,6 +320,14 @@
             this.label8.Name = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // login
+            // 
+            resources.ApplyResources(this.login, "login");
+            this.login.LinkColor = System.Drawing.Color.Black;
+            this.login.Name = "login";
+            this.login.TabStop = true;
+            this.login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_LinkClicked);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -337,6 +347,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
             this.BrowseRecipesPanel.ResumeLayout(false);
             this.BrowseRecipesPanel.PerformLayout();
@@ -384,6 +395,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox ExitIcon;
+        private System.Windows.Forms.LinkLabel login;
     }
 }
 

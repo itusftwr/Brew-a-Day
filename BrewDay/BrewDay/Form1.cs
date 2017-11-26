@@ -98,5 +98,12 @@ namespace BrewDay
             System.Windows.Forms.Application.Exit();
         }
 
+
+        private void login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            var logform = new Login();
+            logform.Show();
+        }
     }
 }
