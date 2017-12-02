@@ -70,9 +70,10 @@
             this.ingredientsTableAdapter = new BrewDay.databaseDataSetTableAdapters.ingredientsTableAdapter();
             this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new BrewDay.databaseDataSetTableAdapters.TableAdapterManager();
+            this.userTableAdapter = new BrewDay.databaseDataSetTableAdapters.userTableAdapter();
             this.ingredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter = new BrewDay.databaseDataSetTableAdapters.userTableAdapter();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -203,6 +204,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.login);
             this.panel2.Controls.Add(this.ExitIcon);
             resources.ApplyResources(this.panel2, "panel2");
@@ -391,6 +393,10 @@
             this.tableAdapterManager.UpdateOrder = BrewDay.databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.userTableAdapter = this.userTableAdapter;
             // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
             // ingredientsBindingSource1
             // 
             this.ingredientsBindingSource1.DataMember = "ingredients";
@@ -401,9 +407,13 @@
             this.userBindingSource.DataMember = "user";
             this.userBindingSource.DataSource = this.databaseDataSet;
             // 
-            // userTableAdapter
+            // linkLabel1
             // 
-            this.userTableAdapter.ClearBeforeFill = true;
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
@@ -491,6 +501,7 @@
         private databaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private databaseDataSetTableAdapters.userTableAdapter userTableAdapter;
         private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

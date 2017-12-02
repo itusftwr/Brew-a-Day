@@ -120,5 +120,11 @@ namespace BrewDay
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            signup signupform = new signup();
+            signupform.Show();
+        }
     }
 }

@@ -79,6 +79,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signup.cs" />
+    <Compile Include="signup.Designer.cs" />
     <Compile Include="user.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -95,6 +97,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="signup.resx" />
     <None Include="databaseDataSet.xsc">
       <DependentUpon>databaseDataSet.xsd</DependentUpon>
     </None>

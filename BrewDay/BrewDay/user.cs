@@ -23,5 +23,24 @@ namespace BrewDay
         {
             return password;
         }
+        private recipe current_recipe;
+        /*
+        public void AddRecipe(recipe a)
+        {
+
+        }
+        public void modify_fav_rec_list()
+        {
+
+        }
+        public recipe wsibt()
+        {
+
+        }
+        public void start_brewing(recipe a)
+        {
+
+        }
+        */
     }
 }
