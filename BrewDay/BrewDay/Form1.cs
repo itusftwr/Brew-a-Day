@@ -19,6 +19,10 @@ namespace BrewDay
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'databaseDataSet.ingredients' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.ingredientsTableAdapter.Fill(this.databaseDataSet.ingredients);
+            // TODO: Bu kod satırı 'databaseDataSet.fav_rec' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.fav_recTableAdapter.Fill(this.databaseDataSet.fav_rec);
 
         }
 
@@ -104,6 +108,11 @@ namespace BrewDay
             
             var logform = new Login();
             logform.Show();
+        }
+
+        private void IngListPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

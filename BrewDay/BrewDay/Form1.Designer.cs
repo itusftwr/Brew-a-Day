@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label maltLabel;
+            System.Windows.Forms.Label hopsLabel;
+            System.Windows.Forms.Label yeastsLabel;
+            System.Windows.Forms.Label sugarsLabel;
+            System.Windows.Forms.Label additivesLabel;
+            System.Windows.Forms.Label waterLabel;
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,6 +49,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.login = new System.Windows.Forms.LinkLabel();
             this.ExitIcon = new System.Windows.Forms.PictureBox();
             this.BrowseRecipesPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +69,29 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.LinkLabel();
+            this.databaseDataSet = new BrewDay.databaseDataSet();
+            this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.favrecBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fav_recTableAdapter = new BrewDay.databaseDataSetTableAdapters.fav_recTableAdapter();
+            this.ingredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ingredientsTableAdapter = new BrewDay.databaseDataSetTableAdapters.ingredientsTableAdapter();
+            this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new BrewDay.databaseDataSetTableAdapters.TableAdapterManager();
+            this.ingredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.maltTextBox = new System.Windows.Forms.TextBox();
+            this.hopsTextBox = new System.Windows.Forms.TextBox();
+            this.yeastsTextBox = new System.Windows.Forms.TextBox();
+            this.sugarsTextBox = new System.Windows.Forms.TextBox();
+            this.additivesTextBox = new System.Windows.Forms.TextBox();
+            this.waterTextBox = new System.Windows.Forms.TextBox();
+            idLabel = new System.Windows.Forms.Label();
+            maltLabel = new System.Windows.Forms.Label();
+            hopsLabel = new System.Windows.Forms.Label();
+            yeastsLabel = new System.Windows.Forms.Label();
+            sugarsLabel = new System.Windows.Forms.Label();
+            additivesLabel = new System.Windows.Forms.Label();
+            waterLabel = new System.Windows.Forms.Label();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,6 +103,12 @@
             this.RecipeListPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.IngListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favrecBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPanel
@@ -189,6 +226,14 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // login
+            // 
+            resources.ApplyResources(this.login, "login");
+            this.login.LinkColor = System.Drawing.Color.Black;
+            this.login.Name = "login";
+            this.login.TabStop = true;
+            this.login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_LinkClicked);
+            // 
             // ExitIcon
             // 
             resources.ApplyResources(this.ExitIcon, "ExitIcon");
@@ -298,11 +343,26 @@
             // IngListPanel
             // 
             this.IngListPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.IngListPanel.Controls.Add(idLabel);
+            this.IngListPanel.Controls.Add(this.idTextBox);
+            this.IngListPanel.Controls.Add(maltLabel);
+            this.IngListPanel.Controls.Add(this.maltTextBox);
+            this.IngListPanel.Controls.Add(hopsLabel);
+            this.IngListPanel.Controls.Add(this.hopsTextBox);
+            this.IngListPanel.Controls.Add(yeastsLabel);
+            this.IngListPanel.Controls.Add(this.yeastsTextBox);
+            this.IngListPanel.Controls.Add(sugarsLabel);
+            this.IngListPanel.Controls.Add(this.sugarsTextBox);
+            this.IngListPanel.Controls.Add(additivesLabel);
+            this.IngListPanel.Controls.Add(this.additivesTextBox);
+            this.IngListPanel.Controls.Add(waterLabel);
+            this.IngListPanel.Controls.Add(this.waterTextBox);
             this.IngListPanel.Controls.Add(this.label10);
             this.IngListPanel.Controls.Add(this.label9);
             this.IngListPanel.Controls.Add(this.label8);
             resources.ApplyResources(this.IngListPanel, "IngListPanel");
             this.IngListPanel.Name = "IngListPanel";
+            this.IngListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.IngListPanel_Paint);
             // 
             // label10
             // 
@@ -320,13 +380,130 @@
             this.label8.Name = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // login
+            // databaseDataSet
             // 
-            resources.ApplyResources(this.login, "login");
-            this.login.LinkColor = System.Drawing.Color.Black;
-            this.login.Name = "login";
-            this.login.TabStop = true;
-            this.login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_LinkClicked);
+            this.databaseDataSet.DataSetName = "databaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // databaseDataSetBindingSource
+            // 
+            this.databaseDataSetBindingSource.DataSource = this.databaseDataSet;
+            this.databaseDataSetBindingSource.Position = 0;
+            // 
+            // favrecBindingSource
+            // 
+            this.favrecBindingSource.DataMember = "fav_rec";
+            this.favrecBindingSource.DataSource = this.databaseDataSetBindingSource;
+            // 
+            // fav_recTableAdapter
+            // 
+            this.fav_recTableAdapter.ClearBeforeFill = true;
+            // 
+            // ingredientsBindingSource
+            // 
+            this.ingredientsBindingSource.DataMember = "ingredients";
+            this.ingredientsBindingSource.DataSource = this.databaseDataSetBindingSource;
+            // 
+            // ingredientsTableAdapter
+            // 
+            this.ingredientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // fav_recBindingSource
+            // 
+            this.fav_recBindingSource.DataMember = "fav_rec";
+            this.fav_recBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.fav_recTableAdapter = this.fav_recTableAdapter;
+            this.tableAdapterManager.ingredientsTableAdapter = this.ingredientsTableAdapter;
+            this.tableAdapterManager.recipe_commentTableAdapter = null;
+            this.tableAdapterManager.recipesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BrewDay.databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.userTableAdapter = null;
+            // 
+            // ingredientsBindingSource1
+            // 
+            this.ingredientsBindingSource1.DataMember = "ingredients";
+            this.ingredientsBindingSource1.DataSource = this.databaseDataSet;
+            // 
+            // idLabel
+            // 
+            resources.ApplyResources(idLabel, "idLabel");
+            idLabel.Name = "idLabel";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "id", true));
+            resources.ApplyResources(this.idTextBox, "idTextBox");
+            this.idTextBox.Name = "idTextBox";
+            // 
+            // maltLabel
+            // 
+            resources.ApplyResources(maltLabel, "maltLabel");
+            maltLabel.Name = "maltLabel";
+            // 
+            // maltTextBox
+            // 
+            this.maltTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "malt", true));
+            resources.ApplyResources(this.maltTextBox, "maltTextBox");
+            this.maltTextBox.Name = "maltTextBox";
+            // 
+            // hopsLabel
+            // 
+            resources.ApplyResources(hopsLabel, "hopsLabel");
+            hopsLabel.Name = "hopsLabel";
+            // 
+            // hopsTextBox
+            // 
+            this.hopsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "hops", true));
+            resources.ApplyResources(this.hopsTextBox, "hopsTextBox");
+            this.hopsTextBox.Name = "hopsTextBox";
+            // 
+            // yeastsLabel
+            // 
+            resources.ApplyResources(yeastsLabel, "yeastsLabel");
+            yeastsLabel.Name = "yeastsLabel";
+            // 
+            // yeastsTextBox
+            // 
+            this.yeastsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "yeasts", true));
+            resources.ApplyResources(this.yeastsTextBox, "yeastsTextBox");
+            this.yeastsTextBox.Name = "yeastsTextBox";
+            // 
+            // sugarsLabel
+            // 
+            resources.ApplyResources(sugarsLabel, "sugarsLabel");
+            sugarsLabel.Name = "sugarsLabel";
+            // 
+            // sugarsTextBox
+            // 
+            this.sugarsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "sugars", true));
+            resources.ApplyResources(this.sugarsTextBox, "sugarsTextBox");
+            this.sugarsTextBox.Name = "sugarsTextBox";
+            // 
+            // additivesLabel
+            // 
+            resources.ApplyResources(additivesLabel, "additivesLabel");
+            additivesLabel.Name = "additivesLabel";
+            // 
+            // additivesTextBox
+            // 
+            this.additivesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "additives", true));
+            resources.ApplyResources(this.additivesTextBox, "additivesTextBox");
+            this.additivesTextBox.Name = "additivesTextBox";
+            // 
+            // waterLabel
+            // 
+            resources.ApplyResources(waterLabel, "waterLabel");
+            waterLabel.Name = "waterLabel";
+            // 
+            // waterTextBox
+            // 
+            this.waterTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientsBindingSource1, "water", true));
+            resources.ApplyResources(this.waterTextBox, "waterTextBox");
+            this.waterTextBox.Name = "waterTextBox";
             // 
             // Form1
             // 
@@ -358,6 +535,12 @@
             this.panel6.ResumeLayout(false);
             this.IngListPanel.ResumeLayout(false);
             this.IngListPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favrecBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,6 +579,22 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox ExitIcon;
         private System.Windows.Forms.LinkLabel login;
+        private databaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
+        private System.Windows.Forms.BindingSource favrecBindingSource;
+        private databaseDataSetTableAdapters.fav_recTableAdapter fav_recTableAdapter;
+        private System.Windows.Forms.BindingSource ingredientsBindingSource;
+        private databaseDataSetTableAdapters.ingredientsTableAdapter ingredientsTableAdapter;
+        private System.Windows.Forms.BindingSource ingredientsBindingSource1;
+        private System.Windows.Forms.BindingSource fav_recBindingSource;
+        private databaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox maltTextBox;
+        private System.Windows.Forms.TextBox hopsTextBox;
+        private System.Windows.Forms.TextBox yeastsTextBox;
+        private System.Windows.Forms.TextBox sugarsTextBox;
+        private System.Windows.Forms.TextBox additivesTextBox;
+        private System.Windows.Forms.TextBox waterTextBox;
     }
 }
 

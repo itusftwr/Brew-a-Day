@@ -948,6 +948,54 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;login.Name" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="&gt;&gt;login.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;login.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;login.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ExitIcon.Name" xml:space="preserve">
+    <value>ExitIcon</value>
+  </data>
+  <data name="&gt;&gt;ExitIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExitIcon.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;ExitIcon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1066, 45</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="login.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1015,30 +1063,6 @@
   </data>
   <data name="&gt;&gt;ExitIcon.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 0</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 45</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1577,68 +1601,368 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
+  <metadata name="idLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="idLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+  <data name="idLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 132</value>
+  </data>
+  <data name="idLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
+  </data>
+  <data name="idLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="idLabel.Text" xml:space="preserve">
+    <value>id:</value>
+  </data>
+  <data name="&gt;&gt;idLabel.Name" xml:space="preserve">
+    <value>idLabel</value>
+  </data>
+  <data name="&gt;&gt;idLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;idLabel.Parent" xml:space="preserve">
     <value>IngListPanel</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;idLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <metadata name="ingredientsBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>734, 56</value>
+  </metadata>
+  <metadata name="databaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="idTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 129</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="idTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+  <data name="idTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Name" xml:space="preserve">
+    <value>idTextBox</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Parent" xml:space="preserve">
     <value>IngListPanel</value>
   </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;idTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
+  <metadata name="maltLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="maltLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="maltLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 158</value>
+  </data>
+  <data name="maltLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="maltLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="maltLabel.Text" xml:space="preserve">
+    <value>malt:</value>
+  </data>
+  <data name="&gt;&gt;maltLabel.Name" xml:space="preserve">
+    <value>maltLabel</value>
+  </data>
+  <data name="&gt;&gt;maltLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;maltLabel.Parent" xml:space="preserve">
     <value>IngListPanel</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;maltLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="IngListPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="maltTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 155</value>
   </data>
-  <data name="IngListPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 45</value>
+  <data name="maltTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
   </data>
-  <data name="IngListPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 451</value>
+  <data name="maltTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="IngListPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="&gt;&gt;maltTextBox.Name" xml:space="preserve">
+    <value>maltTextBox</value>
   </data>
-  <data name="IngListPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;maltTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;IngListPanel.Name" xml:space="preserve">
+  <data name="&gt;&gt;maltTextBox.Parent" xml:space="preserve">
     <value>IngListPanel</value>
   </data>
-  <data name="&gt;&gt;IngListPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;maltTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;IngListPanel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <metadata name="hopsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="hopsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;IngListPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="hopsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 184</value>
+  </data>
+  <data name="hopsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="hopsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="hopsLabel.Text" xml:space="preserve">
+    <value>hops:</value>
+  </data>
+  <data name="&gt;&gt;hopsLabel.Name" xml:space="preserve">
+    <value>hopsLabel</value>
+  </data>
+  <data name="&gt;&gt;hopsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hopsLabel.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;hopsLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="hopsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 181</value>
+  </data>
+  <data name="hopsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="hopsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;hopsTextBox.Name" xml:space="preserve">
+    <value>hopsTextBox</value>
+  </data>
+  <data name="&gt;&gt;hopsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hopsTextBox.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;hopsTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="yeastsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="yeastsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="yeastsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 210</value>
+  </data>
+  <data name="yeastsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="yeastsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="yeastsLabel.Text" xml:space="preserve">
+    <value>yeasts:</value>
+  </data>
+  <data name="&gt;&gt;yeastsLabel.Name" xml:space="preserve">
+    <value>yeastsLabel</value>
+  </data>
+  <data name="&gt;&gt;yeastsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yeastsLabel.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;yeastsLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="yeastsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 207</value>
+  </data>
+  <data name="yeastsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="yeastsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;yeastsTextBox.Name" xml:space="preserve">
+    <value>yeastsTextBox</value>
+  </data>
+  <data name="&gt;&gt;yeastsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yeastsTextBox.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;yeastsTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="sugarsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sugarsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sugarsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 236</value>
+  </data>
+  <data name="sugarsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="sugarsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="sugarsLabel.Text" xml:space="preserve">
+    <value>sugars:</value>
+  </data>
+  <data name="&gt;&gt;sugarsLabel.Name" xml:space="preserve">
+    <value>sugarsLabel</value>
+  </data>
+  <data name="&gt;&gt;sugarsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sugarsLabel.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;sugarsLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="sugarsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 233</value>
+  </data>
+  <data name="sugarsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="sugarsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;sugarsTextBox.Name" xml:space="preserve">
+    <value>sugarsTextBox</value>
+  </data>
+  <data name="&gt;&gt;sugarsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sugarsTextBox.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;sugarsTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="additivesLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="additivesLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="additivesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 262</value>
+  </data>
+  <data name="additivesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="additivesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="additivesLabel.Text" xml:space="preserve">
+    <value>additives:</value>
+  </data>
+  <data name="&gt;&gt;additivesLabel.Name" xml:space="preserve">
+    <value>additivesLabel</value>
+  </data>
+  <data name="&gt;&gt;additivesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;additivesLabel.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;additivesLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="additivesTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 259</value>
+  </data>
+  <data name="additivesTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="additivesTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;additivesTextBox.Name" xml:space="preserve">
+    <value>additivesTextBox</value>
+  </data>
+  <data name="&gt;&gt;additivesTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;additivesTextBox.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;additivesTextBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="waterLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="waterLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="waterLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 288</value>
+  </data>
+  <data name="waterLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="waterLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="waterLabel.Text" xml:space="preserve">
+    <value>water:</value>
+  </data>
+  <data name="&gt;&gt;waterLabel.Name" xml:space="preserve">
+    <value>waterLabel</value>
+  </data>
+  <data name="&gt;&gt;waterLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;waterLabel.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;waterLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="waterTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 285</value>
+  </data>
+  <data name="waterTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="waterTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;waterTextBox.Name" xml:space="preserve">
+    <value>waterTextBox</value>
+  </data>
+  <data name="&gt;&gt;waterTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;waterTextBox.Parent" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;waterTextBox.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1668,7 +1992,7 @@
     <value>IngListPanel</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>14</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1698,7 +2022,7 @@
     <value>IngListPanel</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>15</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1725,10 +2049,64 @@
     <value>IngListPanel</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>16</value>
   </data>
+  <data name="IngListPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="IngListPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 45</value>
+  </data>
+  <data name="IngListPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1066, 451</value>
+  </data>
+  <data name="IngListPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="IngListPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;IngListPanel.Name" xml:space="preserve">
+    <value>IngListPanel</value>
+  </data>
+  <data name="&gt;&gt;IngListPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IngListPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IngListPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="databaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="databaseDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>160, 17</value>
+  </metadata>
+  <metadata name="favrecBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>382, 17</value>
+  </metadata>
+  <metadata name="fav_recTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>545, 17</value>
+  </metadata>
+  <metadata name="ingredientsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="ingredientsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>209, 56</value>
+  </metadata>
+  <metadata name="fav_recBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>395, 56</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>563, 56</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -1741,6 +2119,60 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;databaseDataSet.Name" xml:space="preserve">
+    <value>databaseDataSet</value>
+  </data>
+  <data name="&gt;&gt;databaseDataSet.Type" xml:space="preserve">
+    <value>BrewDay.databaseDataSet, databaseDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;databaseDataSetBindingSource.Name" xml:space="preserve">
+    <value>databaseDataSetBindingSource</value>
+  </data>
+  <data name="&gt;&gt;databaseDataSetBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;favrecBindingSource.Name" xml:space="preserve">
+    <value>favrecBindingSource</value>
+  </data>
+  <data name="&gt;&gt;favrecBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fav_recTableAdapter.Name" xml:space="preserve">
+    <value>fav_recTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;fav_recTableAdapter.Type" xml:space="preserve">
+    <value>BrewDay.databaseDataSetTableAdapters.fav_recTableAdapter, databaseDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ingredientsBindingSource.Name" xml:space="preserve">
+    <value>ingredientsBindingSource</value>
+  </data>
+  <data name="&gt;&gt;ingredientsBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ingredientsTableAdapter.Name" xml:space="preserve">
+    <value>ingredientsTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;ingredientsTableAdapter.Type" xml:space="preserve">
+    <value>BrewDay.databaseDataSetTableAdapters.ingredientsTableAdapter, databaseDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;fav_recBindingSource.Name" xml:space="preserve">
+    <value>fav_recBindingSource</value>
+  </data>
+  <data name="&gt;&gt;fav_recBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Name" xml:space="preserve">
+    <value>tableAdapterManager</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
+    <value>BrewDay.databaseDataSetTableAdapters.TableAdapterManager, databaseDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ingredientsBindingSource1.Name" xml:space="preserve">
+    <value>ingredientsBindingSource1</value>
+  </data>
+  <data name="&gt;&gt;ingredientsBindingSource1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
