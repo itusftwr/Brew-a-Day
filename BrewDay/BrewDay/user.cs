@@ -23,7 +23,7 @@ namespace BrewDay
         {
             return password;
         }
-        private recipe current_recipe;
+        //private recipe current_recipe;
         /*
         public void AddRecipe(recipe a)
         {
