@@ -45,13 +45,14 @@ namespace BrewDay
             {
                 MessageBox.Show("Login Successful");
                 this.form1.logged_in = true;
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Wrong username or password");
             }
             con.Close();
-            this.Hide();
+
         }
 
         private void UsernameBox_TextChanged(object sender, EventArgs e)
