@@ -12,6 +12,9 @@ namespace BrewDay
 {
     public partial class Form1 : Form
     {
+        public User user = new User();
+        public bool logged_in;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +22,8 @@ namespace BrewDay
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'databaseDataSet.user' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.userTableAdapter.Fill(this.databaseDataSet.user);
             // TODO: Bu kod satırı 'databaseDataSet.ingredients' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.ingredientsTableAdapter.Fill(this.databaseDataSet.ingredients);
             // TODO: Bu kod satırı 'databaseDataSet.fav_rec' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
@@ -95,6 +100,7 @@ namespace BrewDay
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = true;
             IngListPanel.Visible = false;
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -105,8 +111,8 @@ namespace BrewDay
 
         private void login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-            var logform = new Login();
+           
+            Login logform = new Login(this);
             logform.Show();
         }
 
