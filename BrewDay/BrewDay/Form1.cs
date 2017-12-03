@@ -14,6 +14,7 @@ namespace BrewDay
     {
         public User user = new User();
         public bool logged_in = false;
+        Ingredients ingredient = new Ingredients();
 
         public Form1()
         {
@@ -146,6 +147,11 @@ namespace BrewDay
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecipeListPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

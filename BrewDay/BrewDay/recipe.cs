@@ -8,10 +8,10 @@ namespace BrewDay
 {
     class recipe
     {
-        private ingredients ingredients;
+        private Ingredients ingredients;
         private List<string> comment;
         private int time;
-        public void modify_recipe(ingredients a)
+        public void modify_recipe(Ingredients a)
         {
 
         }

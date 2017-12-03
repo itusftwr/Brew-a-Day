@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrewDay
 {
-    class ingredients
+    class Ingredients
     {
         private int malts;
         private int hops;
@@ -14,17 +14,52 @@ namespace BrewDay
         private int sugars;
         private int additives;
         private int water;
-        public void update_ingredients(ingredients a)
+        
+        public int get_malts()
         {
+            return malts;
+        }
+        public int get_hops()
+        {
+            return hops;
+        }
+        public int get_yeasts()
+        {
+            return yeasts;
+        }
+        public int get_sugars()
+        {
+            return sugars;
+        }
+        public int get_additives()
+        {
+            return additives;
+        }
+        public int get_water()
+        {
+            return water;
+        }
+        public void add_malts(int malt)
+        {
+            malts = malts + malt;
+        }
+        public void add_hops(int hop)
+        {
+            hops = hops + hop;
+        }
+        public void add_yeasts(int yeast)
+        {
+            yeasts = yeasts + yeast;
+        }
+        public void add_sugars(int sugar)
+        {
+            sugars = sugars + sugar;
+        }
+        public void add_water(int waterx)
+        {
+            water = water + waterx;
 
         }
-        /*
-        public ingredients get_ingredients()
-        {
-            ingredients a;
 
-            return a;
-        }
-        */
     }
 }

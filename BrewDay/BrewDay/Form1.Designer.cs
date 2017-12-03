@@ -300,6 +300,7 @@
             this.RecipeListPanel.Controls.Add(this.label7);
             resources.ApplyResources(this.RecipeListPanel, "RecipeListPanel");
             this.RecipeListPanel.Name = "RecipeListPanel";
+            this.RecipeListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RecipeListPanel_Paint);
             // 
             // panel6
             // 
