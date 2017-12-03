@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
 namespace BrewDay
 {
     public partial class Form1 : Form
@@ -20,7 +19,6 @@ namespace BrewDay
 
         public Form1()
         {
-
             InitializeComponent();
         }
         private void get_userinfo()
@@ -83,7 +81,7 @@ namespace BrewDay
         {
 
         }
-        //Browse Reicpe Button Clikc
+        
         private void brwsrec_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -333,31 +331,61 @@ namespace BrewDay
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string a = textBox1.Text;
-            int recExst = 0;
+            string recipen = textBox1.Text;           
             con.Open();
-            String str = "SELECT COUNT([recipe_name]) FROM [recipes] WHERE RECIPE_NAME= '" + a +"';";
+            String str = "SELECT COUNT([recipe_name]) FROM [recipes] WHERE RECIPE_NAME= '" + recipen +"';";
             SqlCommand cmd = new SqlCommand(str, con);
-            recExst = (int)cmd.ExecuteScalar();
+            int recExst = (int)cmd.ExecuteScalar();
             if (recExst == 1)
             {
-                BrowseRecipesPanel.Visible = false;
-                WhatShouldIBrwPanel.Visible = false;
-                RecipeListPanel.Visible = false;
-                IngListPanel.Visible = false;
                 commentPanel.Visible = true;
-
-                //str = "SELECT [notes] FROM [recipes] WHERE RECIPE_NAME= '" + a + "';";
+                SqlCommand mycmd = con.CreateCommand();
+                SqlDataReader reader;
+                string bnotes;
+                mycmd.CommandText = "SELECT [notes] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
+                reader = mycmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    bnotes = reader.GetString(0);
+                    textBox2.Text = bnotes;
+                }
+                mycmd.CommandText = "SELECT [ingredient_id] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
+                reader = mycmd.ExecuteReader();
+                int ing;
+                while (reader.Read())
+                {
+                    ing = reader.GetInt32(0);
+                }
+                mycmd.CommandText = "SELECT [ingredient_id] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
+                reader = mycmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    ing = reader.GetInt32(0);
+                }
+                                
             }
             else
             {
+                MessageBox.Show("Invalid recipe name");
+                textBox1.Text = "Recipe name";
+                textBox1.ForeColor = Color.Silver;
 
             }
+            con.Close();
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BrowseRecipesPanel.Visible = true;
+            WhatShouldIBrwPanel.Visible = false;
+            RecipeListPanel.Visible = false;
+            IngListPanel.Visible = false;
+            commentPanel.Visible = false;
         }
     }
 }

@@ -44,11 +44,25 @@
             this.curbrewing = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.login = new System.Windows.Forms.LinkLabel();
+            this.ExitIcon = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.BrowseRecipesPanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.browseBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.browseDatagrid = new System.Windows.Forms.DataGridView();
+            this.recipe_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,35 +95,27 @@
             this.userTableAdapter = new BrewDay.databaseDataSetTableAdapters.userTableAdapter();
             this.ingredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.browseDatagrid = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.browseBox = new System.Windows.Forms.TextBox();
-            this.recipe_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.ExitIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.commentPanel = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
             this.BrowseRecipesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).BeginInit();
             this.WhatShouldIBrwPanel.SuspendLayout();
             this.RecipeListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -123,11 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.commentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,6 +232,13 @@
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -257,6 +265,13 @@
             this.login.TabStop = true;
             this.login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_LinkClicked);
             // 
+            // ExitIcon
+            // 
+            resources.ApplyResources(this.ExitIcon, "ExitIcon");
+            this.ExitIcon.Name = "ExitIcon";
+            this.ExitIcon.TabStop = false;
+            this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
@@ -282,6 +297,101 @@
             resources.ApplyResources(this.BrowseRecipesPanel, "BrowseRecipesPanel");
             this.BrowseRecipesPanel.Name = "BrowseRecipesPanel";
             this.BrowseRecipesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BrowseRecipesPanel_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BrewDay.Properties.Resources.info_icon;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BrewDay.Properties.Resources.basket_icon__1_;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3")});
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // browseBox
+            // 
+            resources.ApplyResources(this.browseBox, "browseBox");
+            this.browseBox.ForeColor = System.Drawing.Color.Silver;
+            this.browseBox.Name = "browseBox";
+            this.browseBox.TextChanged += new System.EventHandler(this.browseBox_TextChanged);
+            this.browseBox.Enter += new System.EventHandler(this.browseBox_Enter);
+            this.browseBox.Leave += new System.EventHandler(this.browseBox_Leave);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // browseDatagrid
+            // 
+            this.browseDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.browseDatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.recipe_name,
+            this.creator,
+            this.time});
+            resources.ApplyResources(this.browseDatagrid, "browseDatagrid");
+            this.browseDatagrid.Name = "browseDatagrid";
+            this.browseDatagrid.ReadOnly = true;
+            this.browseDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.browseDatagrid_CellContentClick);
+            // 
+            // recipe_name
+            // 
+            this.recipe_name.DataPropertyName = "recipe_name";
+            resources.ApplyResources(this.recipe_name, "recipe_name");
+            this.recipe_name.Name = "recipe_name";
+            this.recipe_name.ReadOnly = true;
+            // 
+            // creator
+            // 
+            this.creator.DataPropertyName = "creator";
+            resources.ApplyResources(this.creator, "creator");
+            this.creator.Name = "creator";
+            this.creator.ReadOnly = true;
+            // 
+            // time
+            // 
+            this.time.DataPropertyName = "time";
+            resources.ApplyResources(this.time, "time");
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
             // 
             // label1
             // 
@@ -532,117 +642,9 @@
             this.userBindingSource.DataMember = "user";
             this.userBindingSource.DataSource = this.databaseDataSet;
             // 
-            // browseDatagrid
-            // 
-            this.browseDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.browseDatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.recipe_name,
-            this.creator,
-            this.time});
-            resources.ApplyResources(this.browseDatagrid, "browseDatagrid");
-            this.browseDatagrid.Name = "browseDatagrid";
-            this.browseDatagrid.ReadOnly = true;
-            this.browseDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.browseDatagrid_CellContentClick);
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // browseBox
-            // 
-            resources.ApplyResources(this.browseBox, "browseBox");
-            this.browseBox.ForeColor = System.Drawing.Color.Silver;
-            this.browseBox.Name = "browseBox";
-            this.browseBox.TextChanged += new System.EventHandler(this.browseBox_TextChanged);
-            this.browseBox.Enter += new System.EventHandler(this.browseBox_Enter);
-            this.browseBox.Leave += new System.EventHandler(this.browseBox_Leave);
-            // 
-            // recipe_name
-            // 
-            this.recipe_name.DataPropertyName = "recipe_name";
-            resources.ApplyResources(this.recipe_name, "recipe_name");
-            this.recipe_name.Name = "recipe_name";
-            this.recipe_name.ReadOnly = true;
-            // 
-            // creator
-            // 
-            this.creator.DataPropertyName = "creator";
-            resources.ApplyResources(this.creator, "creator");
-            this.creator.Name = "creator";
-            this.creator.ReadOnly = true;
-            // 
-            // time
-            // 
-            this.time.DataPropertyName = "time";
-            resources.ApplyResources(this.time, "time");
-            this.time.Name = "time";
-            this.time.ReadOnly = true;
-            // 
-            // comboBox1
-            // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3")});
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // ExitIcon
-            // 
-            resources.ApplyResources(this.ExitIcon, "ExitIcon");
-            this.ExitIcon.Name = "ExitIcon";
-            this.ExitIcon.TabStop = false;
-            this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BrewDay.Properties.Resources.info_icon;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BrewDay.Properties.Resources.basket_icon__1_;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            // 
             // commentPanel
             // 
+            this.commentPanel.Controls.Add(this.button3);
             this.commentPanel.Controls.Add(this.textBox3);
             this.commentPanel.Controls.Add(this.label17);
             this.commentPanel.Controls.Add(this.listBox2);
@@ -655,41 +657,22 @@
             resources.ApplyResources(this.commentPanel, "commentPanel");
             this.commentPanel.Name = "commentPanel";
             // 
-            // label13
+            // button3
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // textBox3
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.textBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.Name = "textBox3";
             // 
-            // listBox1
+            // label17
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.listBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.Name = "listBox1";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
             // 
             // listBox2
             // 
@@ -699,16 +682,40 @@
             resources.ApplyResources(this.listBox2, "listBox2");
             this.listBox2.Name = "listBox2";
             // 
-            // label17
+            // label16
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
             // 
-            // textBox3
+            // textBox2
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            this.textBox2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.listBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.Name = "listBox1";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
             // Form1
             // 
@@ -727,10 +734,15 @@
             this.LogoPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
             this.BrowseRecipesPanel.ResumeLayout(false);
             this.BrowseRecipesPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).EndInit();
             this.WhatShouldIBrwPanel.ResumeLayout(false);
             this.WhatShouldIBrwPanel.PerformLayout();
             this.RecipeListPanel.ResumeLayout(false);
@@ -747,11 +759,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.commentPanel.ResumeLayout(false);
             this.commentPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -822,8 +829,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel commentPanel;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ListBox listBox2;
@@ -831,6 +837,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
 
