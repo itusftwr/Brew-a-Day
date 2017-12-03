@@ -102,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
@@ -138,6 +139,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\info-icon.png" />
+    <None Include="Resources\basket-icon %281%29.png" />
+    <None Include="Resources\basket-icon.png" />
+    <None Include="Resources\information-icon2.png" />
+    <None Include="Resources\information-icon %281%29.png" />
+    <None Include="Resources\information-icon1.png" />
+    <None Include="Resources\information-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

@@ -97,13 +97,7 @@ namespace BrewDay
             browseDatagrid.DataSource = table;
 
             con.Close();
-
-
-
-
-
-
-
+            
             BrowseRecipesPanel.Visible = true;
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = false;
@@ -158,13 +152,6 @@ namespace BrewDay
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = true;
             IngListPanel.Visible = false;
-
-
-
-
-
-
-
 
         }
 
@@ -240,64 +227,137 @@ namespace BrewDay
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            con.Open();
+            if (comboBox1.Text == "Search by recipe name")
+            {
+                con.Open();
 
-            String str = "SELECT * FROM [recipes] WHERE RECIPE_NAME = '" + browseBox.Text +"';";
-            SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            browseDatagrid.AutoGenerateColumns = false;
-            adapter.Fill(table);
-            browseDatagrid.DataSource = table;
+                String str = "SELECT * FROM [recipes] WHERE RECIPE_NAME = '" + browseBox.Text + "';";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                browseDatagrid.AutoGenerateColumns = false;
+                adapter.Fill(table);
+                browseDatagrid.DataSource = table;
 
-            con.Close();
+                con.Close();
+            }
+            else if (comboBox1.Text == "Search by creator")
+            {
+                con.Open();
 
+                String str = "SELECT * FROM [recipes] WHERE CREATOR = '" + browseBox.Text + "';";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                browseDatagrid.AutoGenerateColumns = false;
+                adapter.Fill(table);
+                browseDatagrid.DataSource = table;
+
+                con.Close();
+            }
+            else if (comboBox1.Text == "Search by time")
+            {
+                con.Open();
+
+                String str = "SELECT * FROM [recipes] WHERE TIME = '" + browseBox.Text + "';";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                browseDatagrid.AutoGenerateColumns = false;
+                adapter.Fill(table);
+                browseDatagrid.DataSource = table;
+
+                con.Close();
+            }
+            else if (comboBox1.Text == "Show all")
+            {
+                con.Open();
+
+                String str = "SELECT * FROM [recipes];";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                browseDatagrid.AutoGenerateColumns = false;
+                adapter.Fill(table);
+                browseDatagrid.DataSource = table;
+
+                con.Close();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void browseBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void browseBox_Enter(object sender, EventArgs e)
+        {
+            if(browseBox.Text == "Value to search")
+            {
+                browseBox.Text = "";
+                browseBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void browseBox_Leave(object sender, EventArgs e)
+        {
+            if (browseBox.Text == "")
+            {
+                browseBox.Text = "Value to search";
+                browseBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Recipe name")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Recipe name";
+                textBox1.ForeColor = Color.Silver;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string a = textBox1.Text;
+            int recExst = 0;
             con.Open();
-
-            String str = "SELECT * FROM [recipes] WHERE CREATOR = '" + browseBox.Text + "';";
+            String str = "SELECT COUNT([recipe_name]) FROM [recipes] WHERE RECIPE_NAME= '" + a +"';";
             SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            browseDatagrid.AutoGenerateColumns = false;
-            adapter.Fill(table);
-            browseDatagrid.DataSource = table;
+            recExst = (int)cmd.ExecuteScalar();
+            if (recExst == 1)
+            {
+                BrowseRecipesPanel.Visible = false;
+                WhatShouldIBrwPanel.Visible = false;
+                RecipeListPanel.Visible = false;
+                IngListPanel.Visible = false;
+                commentPanel.Visible = true;
 
-            con.Close();
+                //str = "SELECT [notes] FROM [recipes] WHERE RECIPE_NAME= '" + a + "';";
+            }
+            else
+            {
 
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label14_Click(object sender, EventArgs e)
         {
-            con.Open();
 
-            String str = "SELECT * FROM [recipes] WHERE TIME = '" + browseBox.Text + "';";
-            SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            browseDatagrid.AutoGenerateColumns = false;
-            adapter.Fill(table);
-            browseDatagrid.DataSource = table;
-
-            con.Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            con.Open();
-
-            String str = "SELECT * FROM [recipes];";
-            SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            browseDatagrid.AutoGenerateColumns = false;
-            adapter.Fill(table);
-            browseDatagrid.DataSource = table;
-
-            con.Close();
         }
     }
 }
