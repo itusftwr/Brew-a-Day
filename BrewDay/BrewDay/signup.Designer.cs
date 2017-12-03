@@ -56,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(61, 120);
+            this.label1.Location = new System.Drawing.Point(37, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 5;
@@ -75,6 +75,7 @@
             this.password1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password1.Location = new System.Drawing.Point(161, 165);
             this.password1.Name = "password1";
+            this.password1.PasswordChar = '*';
             this.password1.Size = new System.Drawing.Size(187, 13);
             this.password1.TabIndex = 8;
             // 
@@ -83,6 +84,7 @@
             this.password2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password2.Location = new System.Drawing.Point(161, 205);
             this.password2.Name = "password2";
+            this.password2.PasswordChar = '*';
             this.password2.Size = new System.Drawing.Size(187, 13);
             this.password2.TabIndex = 9;
             // 
@@ -90,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(61, 159);
+            this.label3.Location = new System.Drawing.Point(37, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 21);
             this.label3.TabIndex = 10;
@@ -100,11 +102,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(61, 199);
+            this.label4.Location = new System.Drawing.Point(37, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 21);
+            this.label4.Size = new System.Drawing.Size(118, 21);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Password";
+            this.label4.Text = "Password again";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel1
             // 
@@ -120,36 +123,39 @@
             this.button2.Location = new System.Drawing.Point(198, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 55);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Sing Up";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Cancel
             // 
+            this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel.Location = new System.Drawing.Point(3, 0);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(199, 55);
-            this.Cancel.TabIndex = 0;
+            this.Cancel.TabIndex = 11;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // signup
             // 
+            this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
+            this.CancelButton = this.Cancel;
             this.ClientSize = new System.Drawing.Size(384, 339);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.password2);
             this.Controls.Add(this.password1);
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "signup";

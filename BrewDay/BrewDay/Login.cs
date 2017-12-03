@@ -33,8 +33,6 @@ namespace BrewDay
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
-            
             this.form1.user.set_username(UsernameBox.Text, PasswordBox.Text);
             con.Open();
             String str = "SELECT COUNT([USERNAME]) FROM [USER] WHERE USERNAME = '" + form1.user.get_username() + "'AND PASSWORD ='" + form1.user.get_password() + "';";

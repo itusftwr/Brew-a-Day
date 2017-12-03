@@ -145,6 +145,7 @@
             // CancelButton
             // 
             this.CancelButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CancelButton.FlatAppearance.BorderSize = 0;
             this.CancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
@@ -171,8 +172,10 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(388, 298);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
