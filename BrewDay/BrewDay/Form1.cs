@@ -16,7 +16,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\AyDoS\Desktop\brew\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Source\Repos\Brew-a-Day3\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
 
         public Form1()
         {
@@ -115,10 +115,38 @@ namespace BrewDay
         //Recipe List button click
         private void reclist_Click(object sender, EventArgs e)
         {
+            con.Open();
+
+            String str = "SELECT [recipe_name] FROM [fav_rec] WHERE USERNAME = '" + user.get_username() + "';";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = new BindingSource(table, null);
+
+
+            String str2 = "SELECT [recipe_name] FROM [recipes] WHERE CREATOR = '" + user.get_username() + "';";
+            SqlCommand cmd2 = new SqlCommand(str2, con);
+            SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+            DataTable table2 = new DataTable();
+            adapter2.Fill(table2);
+            dataGridView2.DataSource = new BindingSource(table2, null);
+
+            con.Close();
+
+
+
             BrowseRecipesPanel.Visible = false;
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = true;
             IngListPanel.Visible = false;
+
+
+
+
+
+
+
 
         }
 
