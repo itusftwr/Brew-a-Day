@@ -15,30 +15,36 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\AyDoS\Desktop\brew1\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
 
         public Form1()
         {
+
             InitializeComponent();
+            maltupbox.Text = "0";
+            hopsupbox.Text = "0";
+            yeastsupbox.Text = "0";
+            sugarsupbox.Text = "0";
+            additivesupbox.Text = "0";
+            waterupbox.Text = "0";
         }
-        /*
+
         private void get_userinfo()
         {
             con.Open();
-            String str = "SELECT [ingredient_id],[current_recipe] FROM [USER] WHERE USERNAME = '" + user.get_username() + "';";
+            String str = "SELECT [ingredient_name],[current_recipe] FROM [USER] WHERE USERNAME = '" + user.get_username() + "';";
             SqlCommand cmd = new SqlCommand(str, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
 
-                user.set_ingredient_id(reader["ingredient_id"].ToString());
+                user.set_ingredient_name(reader["ingredient_name"].ToString());
                 user.set_current_recipe(reader["current_recipe"].ToString());
 
             }
             con.Close();
-
         }
-        */
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: Bu kod satırı 'databaseDataSet.user' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
@@ -170,7 +176,44 @@ namespace BrewDay
 
         private void IngListPanel_Paint(object sender, PaintEventArgs e)
         {
+           
 
+            if (user.get_ingredient_name() == "")
+            {
+                maltbox.Text = "0";
+                hopsbox.Text = "0";
+                yeastsbox.Text = "0";
+                sugarsbox.Text = "0";
+                additivesbox.Text = "0";
+                waterbox.Text = "0";
+
+            }
+            else
+            {
+
+                Ingredients ingredient = new Ingredients();
+                con.Open();
+                String str = "SELECT [malt],[hops],[yeasts],[sugars],[additives],[water] FROM [ingredients] WHERE name = '" + user.get_ingredient_name() + "';";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    ingredient.add_malts(reader.GetInt32(0));
+                    ingredient.add_hops(reader.GetInt32(1));
+                    ingredient.add_yeasts(reader.GetInt32(2));
+                    ingredient.add_sugars(reader.GetInt32(3));
+                    ingredient.add_additives(reader.GetInt32(4));
+                    ingredient.add_water(reader.GetInt32(5));
+                    maltbox.Text = ingredient.get_malts().ToString();
+                    hopsbox.Text = ingredient.get_hops().ToString();
+                    yeastsbox.Text = ingredient.get_yeasts().ToString();
+                    sugarsbox.Text = ingredient.get_sugars().ToString();
+                    additivesbox.Text = ingredient.get_additives().ToString();
+                    waterbox.Text = ingredient.get_water().ToString();
+
+                }
+                con.Close();
+            }
 
         }
 
@@ -187,7 +230,7 @@ namespace BrewDay
                 login.Visible = false;
                 linkLabel1.Visible = false;
                 label11.Visible = true;
-                //get_userinfo();
+                get_userinfo();
             }
         }
         public void changeSignupLab()
@@ -387,6 +430,47 @@ namespace BrewDay
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = false;
             commentPanel.Visible = false;
+        }
+
+        private void update_ingredients_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            if (user.get_ingredient_name() == "")
+            {
+                user.set_ingredient_name(user.get_username());
+                String str = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ( '" + user.get_ingredient_name() + "','" + Convert.ToInt32(maltupbox.Text) + "','" + Convert.ToInt32(hopsupbox.Text) + "','" + Convert.ToInt32(yeastsupbox.Text) + "','" + Convert.ToInt32(sugarsupbox.Text) + "','" + Convert.ToInt32(additivesupbox.Text) + "','" + Convert.ToInt32(waterupbox.Text) + "');";
+                SqlCommand cmd = new SqlCommand(str, con);
+                cmd.ExecuteNonQuery();
+                str = "UPDATE [USER] SET [ingredient_name]='" + user.get_ingredient_name() + "' where[username] = '" + user.get_username() + "';";
+                cmd = new SqlCommand(str, con);
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                int malt = Convert.ToInt32(maltupbox.Text) + Convert.ToInt32(maltbox.Text);
+                int hops = Convert.ToInt32(hopsupbox.Text) + Convert.ToInt32(hopsbox.Text);
+                int yeasts = Convert.ToInt32(yeastsupbox.Text) + Convert.ToInt32(yeastsbox.Text);
+                int sugars = Convert.ToInt32(sugarsupbox.Text) + Convert.ToInt32(sugarsbox.Text);
+                int additives = Convert.ToInt32(additivesupbox.Text) + Convert.ToInt32(additivesbox.Text);
+                int water = Convert.ToInt32(waterupbox.Text) + Convert.ToInt32(waterbox.Text);
+
+                String str = "UPDATE [INGREDIENTS] SET  [malt] ='" + malt + "', [hops] ='" + hops + "', [yeasts] ='" + yeasts + "', [sugars] ='" + sugars + "', [additives] ='" + additives + "', [water] ='" + water + "'where name ='" + user.get_ingredient_name() + "';";
+                SqlCommand cmd = new SqlCommand(str, con);
+                cmd.ExecuteNonQuery();
+            }
+            maltupbox.Text = "0";
+            hopsupbox.Text = "0";
+            yeastsupbox.Text = "0";
+            sugarsupbox.Text = "0";
+            additivesupbox.Text = "0";
+            waterupbox.Text = "0";
+            con.Close();
+        }
+
+        private void maltbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

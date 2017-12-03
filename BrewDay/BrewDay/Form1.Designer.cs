@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -83,7 +83,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.IngListPanel = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -106,6 +105,33 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.maltbox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.hopsbox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.yeastsbox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.waterbox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.additivesbox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.sugarsbox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.yeastsupbox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.hopsupbox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.maltupbox = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.waterupbox = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.additivesupbox = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.sugarsupbox = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.update_ingredients = new System.Windows.Forms.Button();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -460,21 +486,21 @@
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonShadow;
             resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle10;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -506,21 +532,21 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             // 
             // recipenameDataGridViewTextBoxColumn
             // 
@@ -571,17 +597,38 @@
             // IngListPanel
             // 
             this.IngListPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.IngListPanel.Controls.Add(this.update_ingredients);
+            this.IngListPanel.Controls.Add(this.waterupbox);
+            this.IngListPanel.Controls.Add(this.label28);
+            this.IngListPanel.Controls.Add(this.additivesupbox);
+            this.IngListPanel.Controls.Add(this.label29);
+            this.IngListPanel.Controls.Add(this.sugarsupbox);
+            this.IngListPanel.Controls.Add(this.label30);
+            this.IngListPanel.Controls.Add(this.yeastsupbox);
+            this.IngListPanel.Controls.Add(this.label25);
+            this.IngListPanel.Controls.Add(this.hopsupbox);
+            this.IngListPanel.Controls.Add(this.label26);
+            this.IngListPanel.Controls.Add(this.maltupbox);
+            this.IngListPanel.Controls.Add(this.label27);
+            this.IngListPanel.Controls.Add(this.label24);
+            this.IngListPanel.Controls.Add(this.waterbox);
+            this.IngListPanel.Controls.Add(this.label21);
+            this.IngListPanel.Controls.Add(this.additivesbox);
+            this.IngListPanel.Controls.Add(this.label22);
+            this.IngListPanel.Controls.Add(this.sugarsbox);
+            this.IngListPanel.Controls.Add(this.label23);
+            this.IngListPanel.Controls.Add(this.yeastsbox);
+            this.IngListPanel.Controls.Add(this.label20);
+            this.IngListPanel.Controls.Add(this.hopsbox);
+            this.IngListPanel.Controls.Add(this.label19);
+            this.IngListPanel.Controls.Add(this.label18);
+            this.IngListPanel.Controls.Add(this.maltbox);
             this.IngListPanel.Controls.Add(this.label10);
             this.IngListPanel.Controls.Add(this.label9);
             this.IngListPanel.Controls.Add(this.label8);
             resources.ApplyResources(this.IngListPanel, "IngListPanel");
             this.IngListPanel.Name = "IngListPanel";
             this.IngListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.IngListPanel_Paint);
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
             // 
             // label9
             // 
@@ -717,6 +764,164 @@
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // maltbox
+            // 
+            this.maltbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.maltbox, "maltbox");
+            this.maltbox.Name = "maltbox";
+            this.maltbox.ReadOnly = true;
+            this.maltbox.TextChanged += new System.EventHandler(this.maltbox_TextChanged);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // hopsbox
+            // 
+            this.hopsbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.hopsbox, "hopsbox");
+            this.hopsbox.Name = "hopsbox";
+            this.hopsbox.ReadOnly = true;
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
+            // yeastsbox
+            // 
+            this.yeastsbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.yeastsbox, "yeastsbox");
+            this.yeastsbox.Name = "yeastsbox";
+            this.yeastsbox.ReadOnly = true;
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
+            // 
+            // waterbox
+            // 
+            this.waterbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.waterbox, "waterbox");
+            this.waterbox.Name = "waterbox";
+            this.waterbox.ReadOnly = true;
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
+            // additivesbox
+            // 
+            this.additivesbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.additivesbox, "additivesbox");
+            this.additivesbox.Name = "additivesbox";
+            this.additivesbox.ReadOnly = true;
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // sugarsbox
+            // 
+            this.sugarsbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.sugarsbox, "sugarsbox");
+            this.sugarsbox.Name = "sugarsbox";
+            this.sugarsbox.ReadOnly = true;
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
+            // yeastsupbox
+            // 
+            this.yeastsupbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.yeastsupbox, "yeastsupbox");
+            this.yeastsupbox.Name = "yeastsupbox";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // hopsupbox
+            // 
+            this.hopsupbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.hopsupbox, "hopsupbox");
+            this.hopsupbox.Name = "hopsupbox";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // maltupbox
+            // 
+            this.maltupbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.maltupbox, "maltupbox");
+            this.maltupbox.Name = "maltupbox";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // waterupbox
+            // 
+            this.waterupbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.waterupbox, "waterupbox");
+            this.waterupbox.Name = "waterupbox";
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.Name = "label28";
+            // 
+            // additivesupbox
+            // 
+            this.additivesupbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.additivesupbox, "additivesupbox");
+            this.additivesupbox.Name = "additivesupbox";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // sugarsupbox
+            // 
+            this.sugarsupbox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.sugarsupbox, "sugarsupbox");
+            this.sugarsupbox.Name = "sugarsupbox";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // update_ingredients
+            // 
+            this.update_ingredients.BackColor = System.Drawing.Color.Goldenrod;
+            resources.ApplyResources(this.update_ingredients, "update_ingredients");
+            this.update_ingredients.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.update_ingredients.Name = "update_ingredients";
+            this.update_ingredients.UseVisualStyleBackColor = false;
+            this.update_ingredients.Click += new System.EventHandler(this.update_ingredients_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -724,11 +929,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
-            this.Controls.Add(this.commentPanel);
-            this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.IngListPanel);
             this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.WhatShouldIBrwPanel);
+            this.Controls.Add(this.commentPanel);
+            this.Controls.Add(this.BrowseRecipesPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -796,7 +1001,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel IngListPanel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox ExitIcon;
         private System.Windows.Forms.LinkLabel login;
@@ -840,6 +1044,33 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox waterupbox;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox additivesupbox;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox sugarsupbox;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox yeastsupbox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox hopsupbox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox maltupbox;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox waterbox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox additivesbox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox sugarsbox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox yeastsbox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox hopsbox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox maltbox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button update_ingredients;
     }
 }
 
