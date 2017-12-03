@@ -15,7 +15,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\AyDoS\Desktop\brew1\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
 
         public Form1()
         {
@@ -470,6 +470,119 @@ namespace BrewDay
 
         private void maltbox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void addRec_Click(object sender, EventArgs e)
+        {
+            RecipeListPanel.Visible = false;
+            recipelistadd.Visible = true;
+
+        }
+
+        private void addrecipecancelbut_Click(object sender, EventArgs e)
+        {
+            RecipeListPanel.Visible = true;
+            recipelistadd.Visible = false;
+        }
+
+        private void addrecipeproceed_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            if (addrecipenamebox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("No name for the recipe");
+                con.Close();
+
+                return;
+            }
+            else if (addrecipetime.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("No expected time given for the recipe");
+                con.Close();
+
+                return;
+
+            }
+            else if (addrecipemaltbox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Not enough ingredients");
+                con.Close();
+
+                return;
+
+
+            }
+            else if (addrecipehopbox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Not enough ingredients");
+                con.Close();
+
+                return;
+
+            }
+            else if (addrecipeyeastbox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Not enough ingredients");
+                con.Close();
+
+                return;
+
+
+            }
+            else if (addrecipesugarbox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Not enough ingredients");
+                con.Close();
+
+                return;
+
+            }
+            else if (addrecipeadditivebox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Not enough ingredients");
+                con.Close();
+
+                return;
+
+
+            }
+            else if (addrecipewaterbox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Not enough ingredients");
+                con.Close();
+
+                return;
+
+
+            }
+
+            else
+            {
+                try
+                {
+                    String ingst = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ('" + addrecipenamebox.Text + "' , '" + Convert.ToInt32(addrecipemaltbox.Text) + "' , '" + Convert.ToInt32(addrecipehopbox.Text) + "' , '" + Convert.ToInt32(addrecipeyeastbox.Text) + "' , '" + Convert.ToInt32(addrecipesugarbox.Text) + "' , '" + Convert.ToInt32(addrecipeadditivebox.Text) + "' , '" + Convert.ToInt32(addrecipewaterbox.Text) + "');";
+                    SqlCommand ing = new SqlCommand(ingst, con);
+                    ing.ExecuteNonQuery();
+                    String statement = "INSERT INTO [RECIPES] ([recipe_name],[time],[ingredient_name],[creator]) VALUES ( '" + addrecipenamebox.Text + "' , '" + Convert.ToInt32(addrecipetime.Text) + "' , '" + addrecipenamebox.Text + "' , '" + user.get_username() + "');"; 
+                    SqlCommand cmd = new SqlCommand(statement, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    con.Close();
+                    return;
+                }
+            }
+
+
+            EventArgs x = new EventArgs();
+            recipelistadd.Visible = false;
+            reclist_Click(addrecipeproceed, x);
 
         }
     }
