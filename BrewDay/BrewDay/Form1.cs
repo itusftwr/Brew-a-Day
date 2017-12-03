@@ -133,11 +133,21 @@ namespace BrewDay
             {
                 login.Visible = false;
                 linkLabel1.Visible = false;
+                label11.Visible = true;
             } 
         }
         public void changeSignupLab()
         {
             linkLabel1.Visible = false;
+        }
+        public void setUsernameText(string a)
+        {
+            label11.Text = a;
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

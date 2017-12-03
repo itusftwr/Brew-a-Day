@@ -45,6 +45,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.login = new System.Windows.Forms.LinkLabel();
             this.ExitIcon = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.BrowseRecipesPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -207,6 +208,7 @@
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.login);
             this.panel2.Controls.Add(this.ExitIcon);
+            this.panel2.Controls.Add(this.label11);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
@@ -232,6 +234,12 @@
             this.ExitIcon.Name = "ExitIcon";
             this.ExitIcon.TabStop = false;
             this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // BrowseRecipesPanel
             // 
@@ -502,6 +510,7 @@
         private databaseDataSetTableAdapters.userTableAdapter userTableAdapter;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label11;
     }
 }
 

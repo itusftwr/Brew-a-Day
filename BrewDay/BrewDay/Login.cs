@@ -45,6 +45,7 @@ namespace BrewDay
             {
                 MessageBox.Show("Login Successful");
                 this.form1.logged_in = true;
+                this.form1.setUsernameText(form1.user.get_username());
                 this.form1.changeLabelVisLogin();
                 this.Hide();
             }
