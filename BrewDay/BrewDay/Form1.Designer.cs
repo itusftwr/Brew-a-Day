@@ -281,7 +281,6 @@
             // BrowseRecipesPanel
             // 
             this.BrowseRecipesPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.BrowseRecipesPanel.Controls.Add(this.commentPanel);
             this.BrowseRecipesPanel.Controls.Add(this.pictureBox2);
             this.BrowseRecipesPanel.Controls.Add(this.pictureBox3);
             this.BrowseRecipesPanel.Controls.Add(this.button2);
@@ -644,6 +643,7 @@
             // 
             // commentPanel
             // 
+            this.commentPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.commentPanel.Controls.Add(this.button3);
             this.commentPanel.Controls.Add(this.textBox3);
             this.commentPanel.Controls.Add(this.label17);
@@ -724,6 +724,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
+            this.Controls.Add(this.commentPanel);
             this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.IngListPanel);
             this.Controls.Add(this.RecipeListPanel);

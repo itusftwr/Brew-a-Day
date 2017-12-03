@@ -329,7 +329,7 @@ namespace BrewDay
                 textBox1.ForeColor = Color.Silver;
             }
         }
-        /*
+        
         private void button2_Click(object sender, EventArgs e)
         {
             string recipen = textBox1.Text;           
@@ -374,7 +374,7 @@ namespace BrewDay
             }
             con.Close();
         }
-        */
+        
         private void label14_Click(object sender, EventArgs e)
         {
 
