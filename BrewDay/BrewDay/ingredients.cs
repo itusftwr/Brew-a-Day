@@ -8,6 +8,7 @@ namespace BrewDay
 {
     class Ingredients
     {
+        private string name;
         private int malts;
         private int hops;
         private int yeasts;
@@ -15,6 +16,10 @@ namespace BrewDay
         private int additives;
         private int water;
         
+        public string get_name()
+        {
+            return name;
+        }
         public int get_malts()
         {
             return malts;
@@ -54,6 +59,10 @@ namespace BrewDay
         public void add_sugars(int sugar)
         {
             sugars = sugars + sugar;
+        }
+        public void add_additives(int additive)
+        {
+            additives = additives + additive;
         }
         public void add_water(int waterx)
         {

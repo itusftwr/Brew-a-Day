@@ -10,16 +10,16 @@ namespace BrewDay
     {
         private string username;
         private string password;
-        private string ingredient_id;
+        private string ingredient_name;
         private string current_recipe;
         public void set_username(string name,string pw)
         {
             username = name;
             password = pw;
         }
-        public void set_ingredient_id(string id)
+        public void set_ingredient_name(string ing_name)
         {
-            ingredient_id = id;
+            ingredient_name = ing_name;
         }
         public void set_current_recipe(string recipe_name)
         {
@@ -33,9 +33,9 @@ namespace BrewDay
         {
             return password;
         }
-        public string get_ingredient_id()
+        public string get_ingredient_name()
         {
-            return ingredient_id;
+            return ingredient_name;
         }
         public string get_current_recipe()
         {

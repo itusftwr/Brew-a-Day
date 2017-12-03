@@ -21,6 +21,7 @@ namespace BrewDay
         {
             InitializeComponent();
         }
+        /*
         private void get_userinfo()
         {
             con.Open();
@@ -37,6 +38,7 @@ namespace BrewDay
             con.Close();
 
         }
+        */
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: Bu kod satırı 'databaseDataSet.user' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
@@ -185,8 +187,7 @@ namespace BrewDay
                 login.Visible = false;
                 linkLabel1.Visible = false;
                 label11.Visible = true;
-                get_userinfo();
-                MessageBox.Show(user.get_ingredient_id());
+                //get_userinfo();
             }
         }
         public void changeSignupLab()
@@ -328,7 +329,7 @@ namespace BrewDay
                 textBox1.ForeColor = Color.Silver;
             }
         }
-
+        /*
         private void button2_Click(object sender, EventArgs e)
         {
             string recipen = textBox1.Text;           
@@ -373,7 +374,7 @@ namespace BrewDay
             }
             con.Close();
         }
-
+        */
         private void label14_Click(object sender, EventArgs e)
         {
 
