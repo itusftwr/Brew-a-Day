@@ -16,7 +16,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Source\Repos\Brew-a-Day3\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
 
         public Form1()
         {
@@ -86,6 +86,24 @@ namespace BrewDay
         //Browse Reicpe Button Clikc
         private void brwsrec_Click(object sender, EventArgs e)
         {
+            con.Open();
+
+            String str = "SELECT * FROM [recipes];";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            browseDatagrid.AutoGenerateColumns = false;
+            adapter.Fill(table);
+            browseDatagrid.DataSource = table;
+
+            con.Close();
+
+
+
+
+
+
+
             BrowseRecipesPanel.Visible = true;
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = false;
@@ -208,6 +226,78 @@ namespace BrewDay
         private void WhatShouldIBrwPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BrowseRecipesPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void browseDatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String str = "SELECT * FROM [recipes] WHERE RECIPE_NAME = '" + browseBox.Text +"';";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            browseDatagrid.AutoGenerateColumns = false;
+            adapter.Fill(table);
+            browseDatagrid.DataSource = table;
+
+            con.Close();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String str = "SELECT * FROM [recipes] WHERE CREATOR = '" + browseBox.Text + "';";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            browseDatagrid.AutoGenerateColumns = false;
+            adapter.Fill(table);
+            browseDatagrid.DataSource = table;
+
+            con.Close();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String str = "SELECT * FROM [recipes] WHERE TIME = '" + browseBox.Text + "';";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            browseDatagrid.AutoGenerateColumns = false;
+            adapter.Fill(table);
+            browseDatagrid.DataSource = table;
+
+            con.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String str = "SELECT * FROM [recipes];";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            browseDatagrid.AutoGenerateColumns = false;
+            adapter.Fill(table);
+            browseDatagrid.DataSource = table;
+
+            con.Close();
         }
     }
 }

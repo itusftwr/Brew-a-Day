@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,6 +58,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.RecipeListPanel = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new BrewDay.databaseDataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.recipenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.addRec = new System.Windows.Forms.Button();
             this.EditFavs = new System.Windows.Forms.Button();
@@ -68,21 +74,24 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.databaseDataSet = new BrewDay.databaseDataSet();
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.favrecBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fav_recTableAdapter = new BrewDay.databaseDataSetTableAdapters.fav_recTableAdapter();
             this.ingredientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ingredientsTableAdapter = new BrewDay.databaseDataSetTableAdapters.ingredientsTableAdapter();
-            this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new BrewDay.databaseDataSetTableAdapters.TableAdapterManager();
             this.userTableAdapter = new BrewDay.databaseDataSetTableAdapters.userTableAdapter();
             this.ingredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.recipenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.browseDatagrid = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.browseBox = new System.Windows.Forms.TextBox();
+            this.recipe_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,17 +101,18 @@
             this.BrowseRecipesPanel.SuspendLayout();
             this.WhatShouldIBrwPanel.SuspendLayout();
             this.RecipeListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.IngListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favrecBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPanel
@@ -253,12 +263,19 @@
             // 
             // BrowseRecipesPanel
             // 
-            this.BrowseRecipesPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.BrowseRecipesPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BrowseRecipesPanel.Controls.Add(this.button4);
+            this.BrowseRecipesPanel.Controls.Add(this.button3);
+            this.BrowseRecipesPanel.Controls.Add(this.button2);
+            this.BrowseRecipesPanel.Controls.Add(this.browseBox);
+            this.BrowseRecipesPanel.Controls.Add(this.button1);
+            this.BrowseRecipesPanel.Controls.Add(this.browseDatagrid);
             this.BrowseRecipesPanel.Controls.Add(this.label1);
             this.BrowseRecipesPanel.Controls.Add(this.label3);
             this.BrowseRecipesPanel.Controls.Add(this.label2);
             resources.ApplyResources(this.BrowseRecipesPanel, "BrowseRecipesPanel");
             this.BrowseRecipesPanel.Name = "BrowseRecipesPanel";
+            this.BrowseRecipesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BrowseRecipesPanel_Paint);
             // 
             // label1
             // 
@@ -314,6 +331,88 @@
             resources.ApplyResources(this.RecipeListPanel, "RecipeListPanel");
             this.RecipeListPanel.Name = "RecipeListPanel";
             this.RecipeListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RecipeListPanel_Paint);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.ColumnHeadersVisible = false;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.fav_recBindingSource;
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "recipe_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fav_recBindingSource
+            // 
+            this.fav_recBindingSource.DataMember = "fav_rec";
+            this.fav_recBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "databaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.recipenameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.fav_recBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            // 
+            // recipenameDataGridViewTextBoxColumn
+            // 
+            this.recipenameDataGridViewTextBoxColumn.DataPropertyName = "recipe_name";
+            resources.ApplyResources(this.recipenameDataGridViewTextBoxColumn, "recipenameDataGridViewTextBoxColumn");
+            this.recipenameDataGridViewTextBoxColumn.Name = "recipenameDataGridViewTextBoxColumn";
+            this.recipenameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // panel6
             // 
@@ -380,11 +479,6 @@
             this.label8.Name = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "databaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // databaseDataSetBindingSource
             // 
             this.databaseDataSetBindingSource.DataSource = this.databaseDataSet;
@@ -407,11 +501,6 @@
             // ingredientsTableAdapter
             // 
             this.ingredientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // fav_recBindingSource
-            // 
-            this.fav_recBindingSource.DataMember = "fav_rec";
-            this.fav_recBindingSource.DataSource = this.databaseDataSet;
             // 
             // tableAdapterManager
             // 
@@ -437,89 +526,83 @@
             this.userBindingSource.DataMember = "user";
             this.userBindingSource.DataSource = this.databaseDataSet;
             // 
-            // dataGridView1
+            // browseDatagrid
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.recipenameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.fav_recBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.browseDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.browseDatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.recipe_name,
+            this.creator,
+            this.time});
+            resources.ApplyResources(this.browseDatagrid, "browseDatagrid");
+            this.browseDatagrid.Name = "browseDatagrid";
+            this.browseDatagrid.ReadOnly = true;
+            this.browseDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.browseDatagrid_CellContentClick);
             // 
-            // recipenameDataGridViewTextBoxColumn
+            // button1
             // 
-            this.recipenameDataGridViewTextBoxColumn.DataPropertyName = "recipe_name";
-            resources.ApplyResources(this.recipenameDataGridViewTextBoxColumn, "recipenameDataGridViewTextBoxColumn");
-            this.recipenameDataGridViewTextBoxColumn.Name = "recipenameDataGridViewTextBoxColumn";
-            this.recipenameDataGridViewTextBoxColumn.ReadOnly = true;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // dataGridView2
+            // browseBox
             // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.ColumnHeadersVisible = false;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.fav_recBindingSource;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
-            this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.browseBox, "browseBox");
+            this.browseBox.Name = "browseBox";
             // 
-            // dataGridViewTextBoxColumn1
+            // recipe_name
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "recipe_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.recipe_name.DataPropertyName = "recipe_name";
+            resources.ApplyResources(this.recipe_name, "recipe_name");
+            this.recipe_name.Name = "recipe_name";
+            this.recipe_name.ReadOnly = true;
+            // 
+            // creator
+            // 
+            this.creator.DataPropertyName = "creator";
+            resources.ApplyResources(this.creator, "creator");
+            this.creator.Name = "creator";
+            this.creator.ReadOnly = true;
+            // 
+            // time
+            // 
+            this.time.DataPropertyName = "time";
+            resources.ApplyResources(this.time, "time");
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
-            this.Controls.Add(this.WhatShouldIBrwPanel);
             this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.IngListPanel);
+            this.Controls.Add(this.RecipeListPanel);
+            this.Controls.Add(this.WhatShouldIBrwPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -536,18 +619,19 @@
             this.WhatShouldIBrwPanel.PerformLayout();
             this.RecipeListPanel.ResumeLayout(false);
             this.RecipeListPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.IngListPanel.ResumeLayout(false);
             this.IngListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favrecBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,6 +687,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn recipenameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView browseDatagrid;
+        private System.Windows.Forms.TextBox browseBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn recipe_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
