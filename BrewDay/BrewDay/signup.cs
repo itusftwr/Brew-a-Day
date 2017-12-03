@@ -13,9 +13,11 @@ namespace BrewDay
 {
     public partial class signup : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\AyDoS\Desktop\brew\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
-        public signup()
+        private Form1 form1;
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        public signup(Form1 form1)
         {
+            this.form1 = form1;
             InitializeComponent();
         }
 
@@ -49,6 +51,7 @@ namespace BrewDay
                 cmd = new SqlCommand(str, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sign up successfull");
+                this.form1.changeSignupLab();
                 this.Hide();
             }
             con.Close();

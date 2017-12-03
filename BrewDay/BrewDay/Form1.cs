@@ -13,7 +13,7 @@ namespace BrewDay
     public partial class Form1 : Form
     {
         public User user = new User();
-        public bool logged_in;
+        public bool logged_in = false;
 
         public Form1()
         {
@@ -123,8 +123,21 @@ namespace BrewDay
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup signupform = new signup();
+            signup signupform = new signup(this);
             signupform.Show();
+        }
+
+        public void changeLabelVisLogin()
+        {
+            if (logged_in == true)
+            {
+                login.Visible = false;
+                linkLabel1.Visible = false;
+            } 
+        }
+        public void changeSignupLab()
+        {
+            linkLabel1.Visible = false;
         }
     }
 }
