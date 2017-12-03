@@ -281,6 +281,7 @@
             this.WhatShouldIBrwPanel.Controls.Add(this.label4);
             resources.ApplyResources(this.WhatShouldIBrwPanel, "WhatShouldIBrwPanel");
             this.WhatShouldIBrwPanel.Name = "WhatShouldIBrwPanel";
+            this.WhatShouldIBrwPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.WhatShouldIBrwPanel_Paint);
             // 
             // label5
             // 
@@ -429,12 +430,12 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Controls.Add(this.RecipeListPanel);
-            this.Controls.Add(this.WhatShouldIBrwPanel);
-            this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
+            this.Controls.Add(this.WhatShouldIBrwPanel);
+            this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.IngListPanel);
+            this.Controls.Add(this.RecipeListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

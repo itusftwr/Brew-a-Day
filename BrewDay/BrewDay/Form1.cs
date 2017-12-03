@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BrewDay
 {
@@ -15,12 +16,29 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\AyDoS\Desktop\brew\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
 
         public Form1()
         {
+
             InitializeComponent();
         }
+        private void get_userinfo()
+        {
+            con.Open();
+            String str = "SELECT [ingredient_id],[current_recipe] FROM [USER] WHERE USERNAME = '" + user.get_username() + "';";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
 
+                user.set_ingredient_id(reader["ingredient_id"].ToString());
+                user.set_current_recipe(reader["current_recipe"].ToString());
+
+            }
+            con.Close();
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: Bu kod satırı 'databaseDataSet.user' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
@@ -112,13 +130,14 @@ namespace BrewDay
 
         private void login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+
             Login logform = new Login(this);
             logform.Show();
         }
 
         private void IngListPanel_Paint(object sender, PaintEventArgs e)
         {
+
 
         }
 
@@ -135,7 +154,9 @@ namespace BrewDay
                 login.Visible = false;
                 linkLabel1.Visible = false;
                 label11.Visible = true;
-            } 
+                get_userinfo();
+                MessageBox.Show(user.get_ingredient_id());
+            }
         }
         public void changeSignupLab()
         {
@@ -152,6 +173,11 @@ namespace BrewDay
         }
 
         private void RecipeListPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void WhatShouldIBrwPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
