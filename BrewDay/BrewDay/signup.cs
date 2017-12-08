@@ -14,7 +14,7 @@ namespace BrewDay
     public partial class signup : Form
     {
         private Form1 form1;
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
         public signup(Form1 form1)
         {
             this.form1 = form1;

@@ -15,7 +15,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
 
         public Form1()
         {
@@ -387,38 +387,48 @@ namespace BrewDay
         
         private void button2_Click(object sender, EventArgs e)
         {
-            string recipen = textBox1.Text;           
+            string recipen = textBox1.Text;             //Recipe name     
             con.Open();
-            String str = "SELECT COUNT([recipe_name]) FROM [recipes] WHERE RECIPE_NAME= '" + recipen +"';";
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            String str = "SELECT COUNT([recipe_name]) FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";         //Does the recipe exist or not?
             SqlCommand cmd = new SqlCommand(str, con);
             int recExst = (int)cmd.ExecuteScalar();
-            if (recExst == 1)
+            if (recExst == 1)                           //If exists
             {
                 commentPanel.Visible = true;
-                SqlCommand mycmd = con.CreateCommand();
+                BrowseRecipesPanel.Visible = false;
+
                 SqlDataReader reader;
-                string bnotes;
-                mycmd.CommandText = "SELECT [notes] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
-                reader = mycmd.ExecuteReader();
-                while (reader.Read())
+                str = "SELECT [notes] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
+                cmd = new SqlCommand(str, con);
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())              //Filling brewer notes and changing recipe label
                 {
-                    bnotes = reader.GetString(0);
-                    textBox2.Text = bnotes;
+                    recipenLabel.Text = recipen;
+                    richTextBox1.Text = reader["notes"].ToString();
                 }
-                mycmd.CommandText = "SELECT [ingredient_id] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
-                reader = mycmd.ExecuteReader();
-                int ing;
-                while (reader.Read())
+
+                str = "SELECT * FROM [INGREDIENTS] WHERE NAME = '" + recipen + "';";
+                cmd = new SqlCommand(str, con);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())              //Filling ingredients listbox
                 {
-                    ing = reader.GetInt32(0);
+                    listBox1.Items.Add(reader["malt"].ToString());
+                    listBox1.Items.Add(reader["hops"].ToString());
+                    listBox1.Items.Add(reader["yeasts"].ToString());
+                    listBox1.Items.Add(reader["sugars"].ToString());
+                    listBox1.Items.Add(reader["additives"].ToString());
+                    listBox1.Items.Add(reader["water"].ToString());
                 }
-                mycmd.CommandText = "SELECT [ingredient_id] FROM [recipes] WHERE RECIPE_NAME= '" + recipen + "';";
-                reader = mycmd.ExecuteReader();
-                while (reader.Read())
+                str = "SELECT * FROM [RECIPE_COMMENT] WHERE RECIPE_NAME = '" + recipen + "';";
+                cmd = new SqlCommand(str, con);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())           //Filling comments listbox
                 {
-                    ing = reader.GetInt32(0);
+                    listBox2.Items.Add(reader["comment"].ToString());
                 }
-                                
             }
             else
             {
@@ -712,6 +722,45 @@ namespace BrewDay
             EventArgs x = new EventArgs();
             modifyRecipePanel.Visible = false;
             reclist_Click(addrecipeproceed, x);
+        }
+
+        private void commentButton_Click(object sender, EventArgs e)
+        {
+            string recipen = textBox1.Text;             //Recipe name     
+            con.Open();
+            String str = "INSERT INTO [RECIPE_COMMENT] ([recipe_name],[comment]) VALUES ('" + recipen + "' , '" + user.get_username() + ": " + textBox3.Text + "');";         //Insert comment
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.ExecuteNonQuery();
+            str = "SELECT * FROM [RECIPE_COMMENT] WHERE RECIPE_NAME = '" + recipen + "';";
+            cmd = new SqlCommand(str, con);
+            listBox2.Items.Clear();
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())           //Filling comments listbox
+            {
+                listBox2.Items.Add(reader["comment"].ToString());
+            }
+
+            con.Close();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            BrowseRecipesPanel.Visible = true;
+            WhatShouldIBrwPanel.Visible = false;
+            RecipeListPanel.Visible = false;
+            IngListPanel.Visible = false;
+            commentPanel.Visible = false;
+        }
+
+        private void commentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label51_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

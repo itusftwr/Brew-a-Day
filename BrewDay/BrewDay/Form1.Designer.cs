@@ -77,14 +77,14 @@
             this.RecipeListPanel = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet = new BrewDay.databaseDataSet();
             this.panel6 = new System.Windows.Forms.Panel();
             this.addRec = new System.Windows.Forms.Button();
             this.EditFavs = new System.Windows.Forms.Button();
             this.ModRec = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new BrewDay.databaseDataSet();
             this.IngListPanel = new System.Windows.Forms.Panel();
             this.update_ingredients = new System.Windows.Forms.Button();
             this.waterupbox = new System.Windows.Forms.TextBox();
@@ -130,11 +130,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.recipenLabel = new System.Windows.Forms.Label();
             this.recipelistadd = new System.Windows.Forms.Panel();
             this.addrecipeproceed = new System.Windows.Forms.Button();
             this.addrecipecancelbut = new System.Windows.Forms.Button();
@@ -164,7 +163,14 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.modifyRecipePanel = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -177,14 +183,14 @@
             this.label46 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.commentButton = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -199,9 +205,9 @@
             this.RecipeListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
-            this.panel6.SuspendLayout();
             this.IngListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favrecBindingSource)).BeginInit();
@@ -365,6 +371,8 @@
             // BrowseRecipesPanel
             // 
             this.BrowseRecipesPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BrowseRecipesPanel.Controls.Add(this.label52);
+            this.BrowseRecipesPanel.Controls.Add(this.comboBox2);
             this.BrowseRecipesPanel.Controls.Add(this.pictureBox2);
             this.BrowseRecipesPanel.Controls.Add(this.pictureBox3);
             this.BrowseRecipesPanel.Controls.Add(this.button2);
@@ -583,16 +591,6 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             // 
-            // fav_recBindingSource
-            // 
-            this.fav_recBindingSource.DataMember = "fav_rec";
-            this.fav_recBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "databaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.addRec);
@@ -634,6 +632,16 @@
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
+            // 
+            // fav_recBindingSource
+            // 
+            this.fav_recBindingSource.DataMember = "fav_rec";
+            this.fav_recBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "databaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // IngListPanel
             // 
@@ -890,28 +898,35 @@
             // commentPanel
             // 
             this.commentPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.commentPanel.Controls.Add(this.label51);
+            this.commentPanel.Controls.Add(this.label13);
+            this.commentPanel.Controls.Add(this.richTextBox1);
+            this.commentPanel.Controls.Add(this.listBox3);
+            this.commentPanel.Controls.Add(this.commentButton);
             this.commentPanel.Controls.Add(this.button3);
             this.commentPanel.Controls.Add(this.textBox3);
             this.commentPanel.Controls.Add(this.label17);
             this.commentPanel.Controls.Add(this.listBox2);
             this.commentPanel.Controls.Add(this.label16);
-            this.commentPanel.Controls.Add(this.textBox2);
             this.commentPanel.Controls.Add(this.label15);
             this.commentPanel.Controls.Add(this.listBox1);
             this.commentPanel.Controls.Add(this.label14);
-            this.commentPanel.Controls.Add(this.label13);
+            this.commentPanel.Controls.Add(this.recipenLabel);
             resources.ApplyResources(this.commentPanel, "commentPanel");
             this.commentPanel.Name = "commentPanel";
+            this.commentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.commentPanel_Paint);
             // 
             // button3
             // 
             resources.ApplyResources(this.button3, "button3");
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Info;
             resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
             // 
@@ -933,13 +948,6 @@
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            // 
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
@@ -958,10 +966,10 @@
             resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
             // 
-            // label13
+            // recipenLabel
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.recipenLabel, "recipenLabel");
+            this.recipenLabel.Name = "recipenLabel";
             // 
             // recipelistadd
             // 
@@ -1205,30 +1213,57 @@
             resources.ApplyResources(this.modifyRecipePanel, "modifyRecipePanel");
             this.modifyRecipePanel.Name = "modifyRecipePanel";
             // 
-            // dataGridView4
+            // label50
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.ColumnHeadersVisible = false;
-            this.dataGridView4.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            resources.ApplyResources(this.dataGridView4, "dataGridView4");
-            this.dataGridView4.Name = "dataGridView4";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.Name = "label50";
+            this.label50.UseCompatibleTextRendering = true;
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.Name = "label49";
+            this.label49.UseCompatibleTextRendering = true;
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.Name = "label48";
+            this.label48.UseCompatibleTextRendering = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ControlDark;
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox13, "textBox13");
+            this.textBox13.Name = "textBox13";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.Name = "textBox5";
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox12, "textBox12");
+            this.textBox12.Name = "textBox12";
             // 
             // textBox6
             // 
@@ -1296,57 +1331,86 @@
             resources.ApplyResources(this.label47, "label47");
             this.label47.Name = "label47";
             // 
-            // textBox12
+            // dataGridView4
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.Info;
-            resources.ApplyResources(this.textBox12, "textBox12");
-            this.textBox12.Name = "textBox12";
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.ColumnHeadersVisible = false;
+            this.dataGridView4.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.dataGridView4, "dataGridView4");
+            this.dataGridView4.Name = "dataGridView4";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView4.RowHeadersVisible = false;
+            this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             // 
-            // textBox5
+            // commentButton
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Info;
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.commentButton, "commentButton");
+            this.commentButton.Name = "commentButton";
+            this.commentButton.UseVisualStyleBackColor = true;
+            this.commentButton.Click += new System.EventHandler(this.commentButton_Click);
             // 
-            // textBox13
+            // listBox3
             // 
-            this.textBox13.BackColor = System.Drawing.SystemColors.Info;
-            resources.ApplyResources(this.textBox13, "textBox13");
-            this.textBox13.Name = "textBox13";
+            this.listBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listBox3.ForeColor = System.Drawing.SystemColors.Info;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Items.AddRange(new object[] {
+            resources.GetString("listBox3.Items"),
+            resources.GetString("listBox3.Items1"),
+            resources.GetString("listBox3.Items2"),
+            resources.GetString("listBox3.Items3"),
+            resources.GetString("listBox3.Items4"),
+            resources.GetString("listBox3.Items5")});
+            resources.ApplyResources(this.listBox3, "listBox3");
+            this.listBox3.Name = "listBox3";
             // 
-            // button4
+            // richTextBox1
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.richTextBox1.BackColor = System.Drawing.Color.DimGray;
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
+            this.richTextBox1.Name = "richTextBox1";
             // 
-            // button6
+            // label13
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ControlDark;
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
-            // label48
+            // label51
             // 
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.Name = "label48";
-            this.label48.UseCompatibleTextRendering = true;
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.Name = "label51";
+            this.label51.Click += new System.EventHandler(this.label51_Click);
             // 
-            // label49
+            // comboBox2
             // 
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.Name = "label49";
-            this.label49.UseCompatibleTextRendering = true;
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3")});
+            this.comboBox2.Name = "comboBox2";
             // 
-            // label50
+            // label52
             // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.Name = "label50";
-            this.label50.UseCompatibleTextRendering = true;
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.Name = "label52";
             // 
             // Form1
             // 
@@ -1384,9 +1448,9 @@
             this.RecipeListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
-            this.panel6.ResumeLayout(false);
             this.IngListPanel.ResumeLayout(false);
             this.IngListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
@@ -1474,11 +1538,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label recipenLabel;
         private System.Windows.Forms.TextBox waterupbox;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox additivesupbox;
@@ -1556,6 +1619,13 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Button commentButton;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
