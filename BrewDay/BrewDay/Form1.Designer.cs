@@ -58,7 +58,7 @@
             this.BrowseRecipesPanel = new System.Windows.Forms.Panel();
             this.shopping = new System.Windows.Forms.Button();
             this.label52 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.shoppingCombo = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -193,6 +193,7 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -227,7 +228,7 @@
             // LogoPanel
             // 
             this.LogoPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.LogoPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.LogoPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LogoPanel.Controls.Add(this.panel5);
             this.LogoPanel.Controls.Add(this.panel3);
             resources.ApplyResources(this.LogoPanel, "LogoPanel");
@@ -315,6 +316,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.GrayText;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.panel7);
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
@@ -333,7 +335,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.login);
             this.panel2.Controls.Add(this.ExitIcon);
@@ -344,7 +346,8 @@
             // linkLabel1
             // 
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -352,7 +355,7 @@
             // login
             // 
             resources.ApplyResources(this.login, "login");
-            this.login.LinkColor = System.Drawing.Color.Black;
+            this.login.LinkColor = System.Drawing.Color.White;
             this.login.Name = "login";
             this.login.TabStop = true;
             this.login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_LinkClicked);
@@ -367,6 +370,7 @@
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.Khaki;
             this.label11.Name = "label11";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
@@ -375,7 +379,7 @@
             this.BrowseRecipesPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.BrowseRecipesPanel.Controls.Add(this.shopping);
             this.BrowseRecipesPanel.Controls.Add(this.label52);
-            this.BrowseRecipesPanel.Controls.Add(this.comboBox2);
+            this.BrowseRecipesPanel.Controls.Add(this.shoppingCombo);
             this.BrowseRecipesPanel.Controls.Add(this.pictureBox2);
             this.BrowseRecipesPanel.Controls.Add(this.pictureBox3);
             this.BrowseRecipesPanel.Controls.Add(this.button2);
@@ -397,22 +401,21 @@
             resources.ApplyResources(this.shopping, "shopping");
             this.shopping.Name = "shopping";
             this.shopping.UseVisualStyleBackColor = true;
+            this.shopping.Click += new System.EventHandler(this.shopping_Click);
             // 
             // label52
             // 
             resources.ApplyResources(this.label52, "label52");
+            this.label52.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label52.Name = "label52";
             // 
-            // comboBox2
+            // shoppingCombo
             // 
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            resources.GetString("comboBox2.Items"),
-            resources.GetString("comboBox2.Items1"),
-            resources.GetString("comboBox2.Items2"),
-            resources.GetString("comboBox2.Items3")});
-            this.comboBox2.Name = "comboBox2";
+            this.shoppingCombo.BackColor = System.Drawing.SystemColors.Window;
+            this.shoppingCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.shoppingCombo, "shoppingCombo");
+            this.shoppingCombo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.shoppingCombo.Name = "shoppingCombo";
             // 
             // pictureBox2
             // 
@@ -446,10 +449,12 @@
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Name = "label12";
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -537,10 +542,11 @@
             // 
             // WhatShouldIBrwPanel
             // 
-            this.WhatShouldIBrwPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.WhatShouldIBrwPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.WhatShouldIBrwPanel.Controls.Add(this.label5);
             this.WhatShouldIBrwPanel.Controls.Add(this.label4);
             resources.ApplyResources(this.WhatShouldIBrwPanel, "WhatShouldIBrwPanel");
+            this.WhatShouldIBrwPanel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.WhatShouldIBrwPanel.Name = "WhatShouldIBrwPanel";
             this.WhatShouldIBrwPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.WhatShouldIBrwPanel_Paint);
             // 
@@ -556,13 +562,14 @@
             // 
             // RecipeListPanel
             // 
-            this.RecipeListPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.RecipeListPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.RecipeListPanel.Controls.Add(this.dataGridView2);
             this.RecipeListPanel.Controls.Add(this.dataGridView1);
             this.RecipeListPanel.Controls.Add(this.panel6);
             this.RecipeListPanel.Controls.Add(this.label6);
             this.RecipeListPanel.Controls.Add(this.label7);
             resources.ApplyResources(this.RecipeListPanel, "RecipeListPanel");
+            this.RecipeListPanel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.RecipeListPanel.Name = "RecipeListPanel";
             this.RecipeListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RecipeListPanel_Paint);
             // 
@@ -626,6 +633,7 @@
             // 
             this.addRec.BackColor = System.Drawing.SystemColors.ControlDark;
             resources.ApplyResources(this.addRec, "addRec");
+            this.addRec.ForeColor = System.Drawing.SystemColors.Desktop;
             this.addRec.Name = "addRec";
             this.addRec.UseVisualStyleBackColor = false;
             this.addRec.Click += new System.EventHandler(this.addRec_Click);
@@ -634,6 +642,7 @@
             // 
             this.EditFavs.BackColor = System.Drawing.SystemColors.ControlDark;
             resources.ApplyResources(this.EditFavs, "EditFavs");
+            this.EditFavs.ForeColor = System.Drawing.SystemColors.Desktop;
             this.EditFavs.Name = "EditFavs";
             this.EditFavs.UseVisualStyleBackColor = false;
             this.EditFavs.Click += new System.EventHandler(this.EditFavs_Click);
@@ -642,6 +651,7 @@
             // 
             this.ModRec.BackColor = System.Drawing.SystemColors.ControlDark;
             resources.ApplyResources(this.ModRec, "ModRec");
+            this.ModRec.ForeColor = System.Drawing.SystemColors.Desktop;
             this.ModRec.Name = "ModRec";
             this.ModRec.UseVisualStyleBackColor = false;
             this.ModRec.Click += new System.EventHandler(this.ModRec_Click);
@@ -650,6 +660,7 @@
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // label7
             // 
@@ -668,7 +679,7 @@
             // 
             // IngListPanel
             // 
-            this.IngListPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.IngListPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.IngListPanel.Controls.Add(this.update_ingredients);
             this.IngListPanel.Controls.Add(this.waterupbox);
             this.IngListPanel.Controls.Add(this.label28);
@@ -699,14 +710,15 @@
             this.IngListPanel.Controls.Add(this.label9);
             this.IngListPanel.Controls.Add(this.label8);
             resources.ApplyResources(this.IngListPanel, "IngListPanel");
+            this.IngListPanel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.IngListPanel.Name = "IngListPanel";
             this.IngListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.IngListPanel_Paint);
             // 
             // update_ingredients
             // 
-            this.update_ingredients.BackColor = System.Drawing.Color.Goldenrod;
+            this.update_ingredients.BackColor = System.Drawing.SystemColors.ControlDark;
             resources.ApplyResources(this.update_ingredients, "update_ingredients");
-            this.update_ingredients.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.update_ingredients.ForeColor = System.Drawing.Color.Black;
             this.update_ingredients.Name = "update_ingredients";
             this.update_ingredients.UseVisualStyleBackColor = false;
             this.update_ingredients.Click += new System.EventHandler(this.update_ingredients_Click);
@@ -788,6 +800,7 @@
             resources.ApplyResources(this.waterbox, "waterbox");
             this.waterbox.Name = "waterbox";
             this.waterbox.ReadOnly = true;
+            this.waterbox.TextChanged += new System.EventHandler(this.waterbox_TextChanged);
             // 
             // label21
             // 
@@ -920,7 +933,7 @@
             // 
             // commentPanel
             // 
-            this.commentPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.commentPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.commentPanel.Controls.Add(this.addFavoruite);
             this.commentPanel.Controls.Add(this.label51);
             this.commentPanel.Controls.Add(this.label13);
@@ -937,12 +950,14 @@
             this.commentPanel.Controls.Add(this.label14);
             this.commentPanel.Controls.Add(this.recipenLabel);
             resources.ApplyResources(this.commentPanel, "commentPanel");
+            this.commentPanel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.commentPanel.Name = "commentPanel";
             this.commentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.commentPanel_Paint);
             // 
             // addFavoruite
             // 
             resources.ApplyResources(this.addFavoruite, "addFavoruite");
+            this.addFavoruite.ForeColor = System.Drawing.SystemColors.Desktop;
             this.addFavoruite.Name = "addFavoruite";
             this.addFavoruite.UseVisualStyleBackColor = true;
             this.addFavoruite.Click += new System.EventHandler(this.button7_Click);
@@ -969,6 +984,8 @@
             // listBox3
             // 
             this.listBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox3, "listBox3");
             this.listBox3.ForeColor = System.Drawing.SystemColors.Info;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.Items.AddRange(new object[] {
@@ -978,12 +995,12 @@
             resources.GetString("listBox3.Items3"),
             resources.GetString("listBox3.Items4"),
             resources.GetString("listBox3.Items5")});
-            resources.ApplyResources(this.listBox3, "listBox3");
             this.listBox3.Name = "listBox3";
             // 
             // commentButton
             // 
             resources.ApplyResources(this.commentButton, "commentButton");
+            this.commentButton.ForeColor = System.Drawing.SystemColors.Desktop;
             this.commentButton.Name = "commentButton";
             this.commentButton.UseVisualStyleBackColor = true;
             this.commentButton.Click += new System.EventHandler(this.commentButton_Click);
@@ -991,6 +1008,7 @@
             // button3
             // 
             resources.ApplyResources(this.button3, "button3");
+            this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
@@ -1028,10 +1046,12 @@
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.listBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.Name = "listBox1";
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -1045,7 +1065,7 @@
             // 
             // recipelistadd
             // 
-            this.recipelistadd.BackColor = System.Drawing.Color.Cornsilk;
+            this.recipelistadd.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.recipelistadd.Controls.Add(this.addrecipeproceed);
             this.recipelistadd.Controls.Add(this.addrecipecancelbut);
             this.recipelistadd.Controls.Add(this.addrecipetime);
@@ -1067,22 +1087,25 @@
             this.recipelistadd.Controls.Add(this.label32);
             this.recipelistadd.Controls.Add(this.label31);
             resources.ApplyResources(this.recipelistadd, "recipelistadd");
+            this.recipelistadd.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.recipelistadd.Name = "recipelistadd";
             // 
             // addrecipeproceed
             // 
-            this.addrecipeproceed.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.addrecipeproceed.BackColor = System.Drawing.SystemColors.ControlDark;
             this.addrecipeproceed.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.addrecipeproceed, "addrecipeproceed");
+            this.addrecipeproceed.ForeColor = System.Drawing.SystemColors.Desktop;
             this.addrecipeproceed.Name = "addrecipeproceed";
             this.addrecipeproceed.UseVisualStyleBackColor = false;
             this.addrecipeproceed.Click += new System.EventHandler(this.addrecipeproceed_Click);
             // 
             // addrecipecancelbut
             // 
-            this.addrecipecancelbut.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.addrecipecancelbut.BackColor = System.Drawing.SystemColors.ControlDark;
             this.addrecipecancelbut.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.addrecipecancelbut, "addrecipecancelbut");
+            this.addrecipecancelbut.ForeColor = System.Drawing.SystemColors.Desktop;
             this.addrecipecancelbut.Name = "addrecipecancelbut";
             this.addrecipecancelbut.UseVisualStyleBackColor = false;
             this.addrecipecancelbut.Click += new System.EventHandler(this.addrecipecancelbut_Click);
@@ -1168,30 +1191,30 @@
             // label35
             // 
             resources.ApplyResources(this.label35, "label35");
-            this.label35.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label35.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label35.Name = "label35";
             // 
             // label33
             // 
             resources.ApplyResources(this.label33, "label33");
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label33.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label33.Name = "label33";
             // 
             // label32
             // 
             resources.ApplyResources(this.label32, "label32");
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label32.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label32.Name = "label32";
             // 
             // label31
             // 
             resources.ApplyResources(this.label31, "label31");
-            this.label31.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label31.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label31.Name = "label31";
             // 
             // modifyFavList
             // 
-            this.modifyFavList.BackColor = System.Drawing.Color.Cornsilk;
+            this.modifyFavList.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.modifyFavList.Controls.Add(this.button5);
             this.modifyFavList.Controls.Add(this.cancelFavEdit);
             this.modifyFavList.Controls.Add(this.proceedToEditFav);
@@ -1199,6 +1222,7 @@
             this.modifyFavList.Controls.Add(this.textBox4);
             this.modifyFavList.Controls.Add(this.dataGridView3);
             resources.ApplyResources(this.modifyFavList, "modifyFavList");
+            this.modifyFavList.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.modifyFavList.Name = "modifyFavList";
             // 
             // button5
@@ -1259,7 +1283,7 @@
             // 
             // modifyRecipePanel
             // 
-            this.modifyRecipePanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.modifyRecipePanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.modifyRecipePanel.Controls.Add(this.label50);
             this.modifyRecipePanel.Controls.Add(this.label49);
             this.modifyRecipePanel.Controls.Add(this.label48);
@@ -1287,18 +1311,21 @@
             // label50
             // 
             resources.ApplyResources(this.label50, "label50");
+            this.label50.ForeColor = System.Drawing.SystemColors.Info;
             this.label50.Name = "label50";
             this.label50.UseCompatibleTextRendering = true;
             // 
             // label49
             // 
             resources.ApplyResources(this.label49, "label49");
+            this.label49.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label49.Name = "label49";
             this.label49.UseCompatibleTextRendering = true;
             // 
             // label48
             // 
             resources.ApplyResources(this.label48, "label48");
+            this.label48.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label48.Name = "label48";
             this.label48.UseCompatibleTextRendering = true;
             // 
@@ -1345,6 +1372,7 @@
             // label42
             // 
             resources.ApplyResources(this.label42, "label42");
+            this.label42.ForeColor = System.Drawing.SystemColors.Info;
             this.label42.Name = "label42";
             // 
             // textBox7
@@ -1356,6 +1384,7 @@
             // label43
             // 
             resources.ApplyResources(this.label43, "label43");
+            this.label43.ForeColor = System.Drawing.SystemColors.Info;
             this.label43.Name = "label43";
             // 
             // textBox8
@@ -1367,6 +1396,7 @@
             // label44
             // 
             resources.ApplyResources(this.label44, "label44");
+            this.label44.ForeColor = System.Drawing.SystemColors.Info;
             this.label44.Name = "label44";
             // 
             // textBox9
@@ -1378,6 +1408,7 @@
             // label45
             // 
             resources.ApplyResources(this.label45, "label45");
+            this.label45.ForeColor = System.Drawing.SystemColors.Info;
             this.label45.Name = "label45";
             // 
             // textBox10
@@ -1389,6 +1420,7 @@
             // label46
             // 
             resources.ApplyResources(this.label46, "label46");
+            this.label46.ForeColor = System.Drawing.SystemColors.Info;
             this.label46.Name = "label46";
             // 
             // textBox11
@@ -1400,6 +1432,7 @@
             // label47
             // 
             resources.ApplyResources(this.label47, "label47");
+            this.label47.ForeColor = System.Drawing.SystemColors.Info;
             this.label47.Name = "label47";
             // 
             // dataGridView4
@@ -1426,6 +1459,11 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             // 
+            // panel7
+            // 
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1433,14 +1471,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
+            this.Controls.Add(this.IngListPanel);
+            this.Controls.Add(this.recipelistadd);
+            this.Controls.Add(this.modifyFavList);
             this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.WhatShouldIBrwPanel);
             this.Controls.Add(this.commentPanel);
             this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.modifyRecipePanel);
-            this.Controls.Add(this.IngListPanel);
-            this.Controls.Add(this.recipelistadd);
-            this.Controls.Add(this.modifyFavList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1634,7 +1672,7 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox shoppingCombo;
         public System.Windows.Forms.Button ingredi;
         public System.Windows.Forms.Button reclist;
         public System.Windows.Forms.Button wsibt;
@@ -1642,6 +1680,7 @@
         public System.Windows.Forms.Button commentButton;
         public System.Windows.Forms.Button addFavoruite;
         public System.Windows.Forms.Button shopping;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 

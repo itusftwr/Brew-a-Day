@@ -117,6 +117,7 @@
             this.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LoginButton.Location = new System.Drawing.Point(0, 0);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(196, 36);
@@ -151,6 +152,7 @@
             this.CancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.CancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CancelButton.Location = new System.Drawing.Point(0, 0);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(196, 36);
@@ -167,7 +169,7 @@
             this.label1.Location = new System.Drawing.Point(153, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 37);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 100;
             this.label1.Text = "Login";
             // 
             // Login
@@ -175,7 +177,6 @@
             this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(388, 298);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

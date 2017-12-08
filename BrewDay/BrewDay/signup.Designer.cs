@@ -120,6 +120,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.Location = new System.Drawing.Point(198, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 55);
@@ -131,6 +132,7 @@
             // Cancel
             // 
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Cancel.Location = new System.Drawing.Point(3, 0);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(199, 55);
