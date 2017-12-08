@@ -17,9 +17,10 @@ namespace BrewDay
         Ingredients ingredient = new Ingredients();
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
 
+        
         public Form1()
         {
-
+            
             InitializeComponent();
             maltupbox.Text = "0";
             hopsupbox.Text = "0";
