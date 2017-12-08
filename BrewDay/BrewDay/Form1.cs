@@ -15,7 +15,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
 
         public Form1()
         {
@@ -144,15 +144,15 @@ namespace BrewDay
         {
             con.Open();
 
-            String str = "SELECT [recipe_name] FROM [fav_rec] WHERE USERNAME = '" + user.get_username() + "';";
-            SqlCommand cmd = new SqlCommand(str, con);
+            String str = " select fav_rec.recipe_name, ingredients.malt, ingredients.hops, ingredients.yeasts,  ingredients.sugars,  ingredients.additives, ingredients.water,  recipes.creator from fav_rec inner join ingredients on fav_rec.recipe_name = ingredients.name inner join recipes on recipes.ingredient_name = ingredients.name Where fav_rec.username = '" + user.get_username() + "';";
+            SqlCommand cmd = new SqlCommand(str, con); 
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
             adapter.Fill(table);
             dataGridView1.DataSource = new BindingSource(table, null);
 
 
-            String str2 = "SELECT [recipe_name], [time] FROM [recipes] WHERE CREATOR = '" + user.get_username() + "';";
+            String str2 = "select recipes.recipe_name, ingredients.malt, ingredients.hops, ingredients.yeasts,  ingredients.sugars,  ingredients.additives, ingredients.water  from recipes inner join ingredients on recipes.recipe_name = ingredients.name Where recipes.creator =  '" + user.get_username() + "';";
             SqlCommand cmd2 = new SqlCommand(str2, con);
             SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
             DataTable table2 = new DataTable();
@@ -616,7 +616,7 @@ namespace BrewDay
             {
                 con.Open();
 
-                String str = "SELECT [recipe_name] FROM [fav_rec] WHERE USERNAME = '" + user.get_username() + "';";
+                String str = " select fav_rec.recipe_name, ingredients.malt, ingredients.hops, ingredients.yeasts,  ingredients.sugars,  ingredients.additives, ingredients.water,  recipes.creator from fav_rec inner join ingredients on fav_rec.recipe_name = ingredients.name inner join recipes on recipes.ingredient_name = ingredients.name Where fav_rec.username = '" + user.get_username() + "';";
                 SqlCommand cmd = new SqlCommand(str, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();
@@ -672,7 +672,7 @@ namespace BrewDay
             {
                 con.Open();
 
-                String str2 = "SELECT [recipe_name], [time] FROM [recipes] WHERE CREATOR = '" + user.get_username() + "';";
+                String str2 = "select recipes.recipe_name, ingredients.malt, ingredients.hops, ingredients.yeasts,  ingredients.sugars,  ingredients.additives, ingredients.water  from recipes inner join ingredients on recipes.recipe_name = ingredients.name Where recipes.creator =  '" + user.get_username() + "';";
                 SqlCommand cmd2 = new SqlCommand(str2, con);
                 SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
                 DataTable table2 = new DataTable();
