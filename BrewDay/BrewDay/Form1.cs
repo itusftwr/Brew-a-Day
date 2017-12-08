@@ -73,6 +73,9 @@ namespace BrewDay
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = true;
+            modifyRecipePanel.Visible = false;
+            recipelistadd.Visible = false;
+            modifyFavList.Visible = false;
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -108,6 +111,9 @@ namespace BrewDay
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = false;
+            modifyRecipePanel.Visible = false;
+            recipelistadd.Visible = false;
+            modifyFavList.Visible = false;
         }
 
 
@@ -129,6 +135,9 @@ namespace BrewDay
             WhatShouldIBrwPanel.Visible = true;
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = false;
+            modifyRecipePanel.Visible = false;
+            recipelistadd.Visible = false;
+            modifyFavList.Visible = false;
         }
         //Recipe List button click
         private void reclist_Click(object sender, EventArgs e)
@@ -143,7 +152,7 @@ namespace BrewDay
             dataGridView1.DataSource = new BindingSource(table, null);
 
 
-            String str2 = "SELECT [recipe_name] FROM [recipes] WHERE CREATOR = '" + user.get_username() + "';";
+            String str2 = "SELECT [recipe_name], [time] FROM [recipes] WHERE CREATOR = '" + user.get_username() + "';";
             SqlCommand cmd2 = new SqlCommand(str2, con);
             SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
             DataTable table2 = new DataTable();
@@ -158,6 +167,9 @@ namespace BrewDay
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = true;
             IngListPanel.Visible = false;
+            modifyRecipePanel.Visible = false;
+            recipelistadd.Visible = false;
+            modifyFavList.Visible = false;
 
         }
 
@@ -584,6 +596,122 @@ namespace BrewDay
             recipelistadd.Visible = false;
             reclist_Click(addrecipeproceed, x);
 
+        }
+
+        private void EditFavs_Click(object sender, EventArgs e)
+        {
+            modifyFavList.Visible = true;
+            RecipeListPanel.Visible = false;
+            try
+            {
+                con.Open();
+
+                String str = "SELECT [recipe_name] FROM [fav_rec] WHERE USERNAME = '" + user.get_username() + "';";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                dataGridView3.DataSource = new BindingSource(table, null);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+                return;
+            }
+        }
+
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                String name = textBox4.Text;
+                String str = "DELETE FROM fav_rec WHERE recipe_name='" + name + "' and username = '" + user.get_username() + "';";
+                SqlCommand del = new SqlCommand(str, con);
+                del.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+                return;
+            }
+            MessageBox.Show("Succesfully deleted.");
+            EventArgs x = new EventArgs();
+            modifyFavList.Visible = false;
+            reclist_Click(addrecipeproceed, x);
+        }
+
+        private void cancelFavEdit_Click(object sender, EventArgs e)
+        {
+            EventArgs x = new EventArgs();
+            modifyFavList.Visible = false;
+            reclist_Click(addrecipeproceed, x);
+        }
+
+        private void ModRec_Click(object sender, EventArgs e)
+        {
+            modifyRecipePanel.Visible = true;
+            RecipeListPanel.Visible = false;
+            try
+            {
+                con.Open();
+
+                String str2 = "SELECT [recipe_name], [time] FROM [recipes] WHERE CREATOR = '" + user.get_username() + "';";
+                SqlCommand cmd2 = new SqlCommand(str2, con);
+                SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+                DataTable table2 = new DataTable();
+                adapter2.Fill(table2);
+                dataGridView4.DataSource = new BindingSource(table2, null);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+                return;
+            }
+        }
+        //cancel for modify recipe
+        private void button6_Click(object sender, EventArgs e)
+        {
+            EventArgs x = new EventArgs();
+            modifyRecipePanel.Visible = false;
+            reclist_Click(addrecipeproceed, x);
+        }
+        //modify recipe proceed button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                String strin = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ( '" + textBox5.Text + "','" + Convert.ToInt32(textBox11.Text) + "','" + Convert.ToInt32(textBox10.Text) + "','" + Convert.ToInt32(textBox9.Text) + "','" + Convert.ToInt32(textBox8.Text) + "','" + Convert.ToInt32(textBox7.Text) + "','" + Convert.ToInt32(textBox6.Text) + "');";
+                SqlCommand cmd = new SqlCommand(strin, con);
+                cmd.ExecuteNonQuery();
+                String strdel = "DELETE FROM recipes WHERE recipe_name='" + textBox12.Text + "' and creator = '" + user.get_username() + "';";
+                SqlCommand del = new SqlCommand(strdel, con);
+                del.ExecuteNonQuery();
+                String ins = "INSERT INTO [RECIPES] ([recipe_name],[time],[ingredient_name],[creator]) VALUES ( '" + textBox5.Text + "','" + textBox13.Text + "','" + textBox5.Text + "','"+user.get_username()+"');";
+                SqlCommand add = new SqlCommand(ins, con);
+                add.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+                return;
+            }
+            MessageBox.Show("Modification Successful");
+            EventArgs x = new EventArgs();
+            modifyRecipePanel.Visible = false;
+            reclist_Click(addrecipeproceed, x);
         }
     }
 }

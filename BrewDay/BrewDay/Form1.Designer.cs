@@ -35,6 +35,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -72,11 +76,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.RecipeListPanel = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fav_recBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new BrewDay.databaseDataSet();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.recipenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.addRec = new System.Windows.Forms.Button();
             this.EditFavs = new System.Windows.Forms.Button();
@@ -134,26 +136,55 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.recipelistadd = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.addrecipenamebox = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.addrecipemaltbox = new System.Windows.Forms.TextBox();
-            this.addrecipehopbox = new System.Windows.Forms.TextBox();
-            this.addrecipeyeastbox = new System.Windows.Forms.TextBox();
-            this.addrecipesugarbox = new System.Windows.Forms.TextBox();
-            this.addrecipeadditivebox = new System.Windows.Forms.TextBox();
-            this.addrecipewaterbox = new System.Windows.Forms.TextBox();
-            this.addrecipetime = new System.Windows.Forms.TextBox();
-            this.addrecipecancelbut = new System.Windows.Forms.Button();
             this.addrecipeproceed = new System.Windows.Forms.Button();
+            this.addrecipecancelbut = new System.Windows.Forms.Button();
+            this.addrecipetime = new System.Windows.Forms.TextBox();
+            this.addrecipewaterbox = new System.Windows.Forms.TextBox();
+            this.addrecipeadditivebox = new System.Windows.Forms.TextBox();
+            this.addrecipesugarbox = new System.Windows.Forms.TextBox();
+            this.addrecipeyeastbox = new System.Windows.Forms.TextBox();
+            this.addrecipehopbox = new System.Windows.Forms.TextBox();
+            this.addrecipemaltbox = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.addrecipenamebox = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.modifyFavList = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.cancelFavEdit = new System.Windows.Forms.Button();
+            this.proceedToEditFav = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.modifyRecipePanel = new System.Windows.Forms.Panel();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -167,9 +198,9 @@
             this.WhatShouldIBrwPanel.SuspendLayout();
             this.RecipeListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.IngListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
@@ -179,6 +210,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.commentPanel.SuspendLayout();
             this.recipelistadd.SuspendLayout();
+            this.modifyFavList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.modifyRecipePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPanel
@@ -418,7 +453,7 @@
             resources.ApplyResources(this.browseDatagrid, "browseDatagrid");
             this.browseDatagrid.Name = "browseDatagrid";
             this.browseDatagrid.ReadOnly = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Cornsilk;
             this.browseDatagrid.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.browseDatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.browseDatagrid_CellContentClick);
             // 
@@ -500,14 +535,10 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.ColumnHeadersVisible = false;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.fav_recBindingSource;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonShadow;
             resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
@@ -527,33 +558,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "recipe_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fav_recBindingSource
-            // 
-            this.fav_recBindingSource.DataMember = "fav_rec";
-            this.fav_recBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "databaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.recipenameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.fav_recBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
@@ -573,12 +583,15 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             // 
-            // recipenameDataGridViewTextBoxColumn
+            // fav_recBindingSource
             // 
-            this.recipenameDataGridViewTextBoxColumn.DataPropertyName = "recipe_name";
-            resources.ApplyResources(this.recipenameDataGridViewTextBoxColumn, "recipenameDataGridViewTextBoxColumn");
-            this.recipenameDataGridViewTextBoxColumn.Name = "recipenameDataGridViewTextBoxColumn";
-            this.recipenameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fav_recBindingSource.DataMember = "fav_rec";
+            this.fav_recBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "databaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel6
             // 
@@ -602,6 +615,7 @@
             resources.ApplyResources(this.EditFavs, "EditFavs");
             this.EditFavs.Name = "EditFavs";
             this.EditFavs.UseVisualStyleBackColor = false;
+            this.EditFavs.Click += new System.EventHandler(this.EditFavs_Click);
             // 
             // ModRec
             // 
@@ -609,6 +623,7 @@
             resources.ApplyResources(this.ModRec, "ModRec");
             this.ModRec.Name = "ModRec";
             this.ModRec.UseVisualStyleBackColor = false;
+            this.ModRec.Click += new System.EventHandler(this.ModRec_Click);
             // 
             // label6
             // 
@@ -974,107 +989,14 @@
             resources.ApplyResources(this.recipelistadd, "recipelistadd");
             this.recipelistadd.Name = "recipelistadd";
             // 
-            // label31
+            // addrecipeproceed
             // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label31.Name = "label31";
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label32.Name = "label32";
-            // 
-            // label33
-            // 
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label33.Name = "label33";
-            // 
-            // label35
-            // 
-            resources.ApplyResources(this.label35, "label35");
-            this.label35.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label35.Name = "label35";
-            // 
-            // addrecipenamebox
-            // 
-            this.addrecipenamebox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipenamebox, "addrecipenamebox");
-            this.addrecipenamebox.Name = "addrecipenamebox";
-            // 
-            // label34
-            // 
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.Name = "label34";
-            // 
-            // label36
-            // 
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.Name = "label36";
-            // 
-            // label37
-            // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.Name = "label37";
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.Name = "label38";
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // addrecipemaltbox
-            // 
-            this.addrecipemaltbox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipemaltbox, "addrecipemaltbox");
-            this.addrecipemaltbox.Name = "addrecipemaltbox";
-            // 
-            // addrecipehopbox
-            // 
-            this.addrecipehopbox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipehopbox, "addrecipehopbox");
-            this.addrecipehopbox.Name = "addrecipehopbox";
-            // 
-            // addrecipeyeastbox
-            // 
-            this.addrecipeyeastbox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipeyeastbox, "addrecipeyeastbox");
-            this.addrecipeyeastbox.Name = "addrecipeyeastbox";
-            // 
-            // addrecipesugarbox
-            // 
-            this.addrecipesugarbox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipesugarbox, "addrecipesugarbox");
-            this.addrecipesugarbox.Name = "addrecipesugarbox";
-            // 
-            // addrecipeadditivebox
-            // 
-            this.addrecipeadditivebox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipeadditivebox, "addrecipeadditivebox");
-            this.addrecipeadditivebox.Name = "addrecipeadditivebox";
-            // 
-            // addrecipewaterbox
-            // 
-            this.addrecipewaterbox.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipewaterbox, "addrecipewaterbox");
-            this.addrecipewaterbox.Name = "addrecipewaterbox";
-            // 
-            // addrecipetime
-            // 
-            this.addrecipetime.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.addrecipetime, "addrecipetime");
-            this.addrecipetime.Name = "addrecipetime";
+            this.addrecipeproceed.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.addrecipeproceed.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.addrecipeproceed, "addrecipeproceed");
+            this.addrecipeproceed.Name = "addrecipeproceed";
+            this.addrecipeproceed.UseVisualStyleBackColor = false;
+            this.addrecipeproceed.Click += new System.EventHandler(this.addrecipeproceed_Click);
             // 
             // addrecipecancelbut
             // 
@@ -1085,14 +1007,346 @@
             this.addrecipecancelbut.UseVisualStyleBackColor = false;
             this.addrecipecancelbut.Click += new System.EventHandler(this.addrecipecancelbut_Click);
             // 
-            // addrecipeproceed
+            // addrecipetime
             // 
-            this.addrecipeproceed.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.addrecipeproceed.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.addrecipeproceed, "addrecipeproceed");
-            this.addrecipeproceed.Name = "addrecipeproceed";
-            this.addrecipeproceed.UseVisualStyleBackColor = false;
-            this.addrecipeproceed.Click += new System.EventHandler(this.addrecipeproceed_Click);
+            this.addrecipetime.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipetime, "addrecipetime");
+            this.addrecipetime.Name = "addrecipetime";
+            // 
+            // addrecipewaterbox
+            // 
+            this.addrecipewaterbox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipewaterbox, "addrecipewaterbox");
+            this.addrecipewaterbox.Name = "addrecipewaterbox";
+            // 
+            // addrecipeadditivebox
+            // 
+            this.addrecipeadditivebox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipeadditivebox, "addrecipeadditivebox");
+            this.addrecipeadditivebox.Name = "addrecipeadditivebox";
+            // 
+            // addrecipesugarbox
+            // 
+            this.addrecipesugarbox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipesugarbox, "addrecipesugarbox");
+            this.addrecipesugarbox.Name = "addrecipesugarbox";
+            // 
+            // addrecipeyeastbox
+            // 
+            this.addrecipeyeastbox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipeyeastbox, "addrecipeyeastbox");
+            this.addrecipeyeastbox.Name = "addrecipeyeastbox";
+            // 
+            // addrecipehopbox
+            // 
+            this.addrecipehopbox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipehopbox, "addrecipehopbox");
+            this.addrecipehopbox.Name = "addrecipehopbox";
+            // 
+            // addrecipemaltbox
+            // 
+            this.addrecipemaltbox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipemaltbox, "addrecipemaltbox");
+            this.addrecipemaltbox.Name = "addrecipemaltbox";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.Name = "label37";
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.Name = "label36";
+            // 
+            // label34
+            // 
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.Name = "label34";
+            // 
+            // addrecipenamebox
+            // 
+            this.addrecipenamebox.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.addrecipenamebox, "addrecipenamebox");
+            this.addrecipenamebox.Name = "addrecipenamebox";
+            // 
+            // label35
+            // 
+            resources.ApplyResources(this.label35, "label35");
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label35.Name = "label35";
+            // 
+            // label33
+            // 
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label33.Name = "label33";
+            // 
+            // label32
+            // 
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label32.Name = "label32";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label31.Name = "label31";
+            // 
+            // modifyFavList
+            // 
+            this.modifyFavList.BackColor = System.Drawing.Color.Cornsilk;
+            this.modifyFavList.Controls.Add(this.button5);
+            this.modifyFavList.Controls.Add(this.cancelFavEdit);
+            this.modifyFavList.Controls.Add(this.proceedToEditFav);
+            this.modifyFavList.Controls.Add(this.label41);
+            this.modifyFavList.Controls.Add(this.textBox4);
+            this.modifyFavList.Controls.Add(this.dataGridView3);
+            resources.ApplyResources(this.modifyFavList, "modifyFavList");
+            this.modifyFavList.Name = "modifyFavList";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlDark;
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // cancelFavEdit
+            // 
+            this.cancelFavEdit.BackColor = System.Drawing.SystemColors.ControlDark;
+            resources.ApplyResources(this.cancelFavEdit, "cancelFavEdit");
+            this.cancelFavEdit.Name = "cancelFavEdit";
+            this.cancelFavEdit.UseVisualStyleBackColor = false;
+            this.cancelFavEdit.Click += new System.EventHandler(this.cancelFavEdit_Click);
+            // 
+            // proceedToEditFav
+            // 
+            resources.ApplyResources(this.proceedToEditFav, "proceedToEditFav");
+            this.proceedToEditFav.Name = "proceedToEditFav";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.textBox4, "textBox4");
+            this.textBox4.Name = "textBox4";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.ColumnHeadersVisible = false;
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
+            this.dataGridView3.Name = "dataGridView3";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            // 
+            // modifyRecipePanel
+            // 
+            this.modifyRecipePanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.modifyRecipePanel.Controls.Add(this.label50);
+            this.modifyRecipePanel.Controls.Add(this.label49);
+            this.modifyRecipePanel.Controls.Add(this.label48);
+            this.modifyRecipePanel.Controls.Add(this.button4);
+            this.modifyRecipePanel.Controls.Add(this.button6);
+            this.modifyRecipePanel.Controls.Add(this.textBox13);
+            this.modifyRecipePanel.Controls.Add(this.textBox5);
+            this.modifyRecipePanel.Controls.Add(this.textBox12);
+            this.modifyRecipePanel.Controls.Add(this.textBox6);
+            this.modifyRecipePanel.Controls.Add(this.label42);
+            this.modifyRecipePanel.Controls.Add(this.textBox7);
+            this.modifyRecipePanel.Controls.Add(this.label43);
+            this.modifyRecipePanel.Controls.Add(this.textBox8);
+            this.modifyRecipePanel.Controls.Add(this.label44);
+            this.modifyRecipePanel.Controls.Add(this.textBox9);
+            this.modifyRecipePanel.Controls.Add(this.label45);
+            this.modifyRecipePanel.Controls.Add(this.textBox10);
+            this.modifyRecipePanel.Controls.Add(this.label46);
+            this.modifyRecipePanel.Controls.Add(this.textBox11);
+            this.modifyRecipePanel.Controls.Add(this.label47);
+            this.modifyRecipePanel.Controls.Add(this.dataGridView4);
+            resources.ApplyResources(this.modifyRecipePanel, "modifyRecipePanel");
+            this.modifyRecipePanel.Name = "modifyRecipePanel";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.ColumnHeadersVisible = false;
+            this.dataGridView4.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.dataGridView4, "dataGridView4");
+            this.dataGridView4.Name = "dataGridView4";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView4.RowHeadersVisible = false;
+            this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox6, "textBox6");
+            this.textBox6.Name = "textBox6";
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.Name = "label42";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox7, "textBox7");
+            this.textBox7.Name = "textBox7";
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.Name = "label43";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox8, "textBox8");
+            this.textBox8.Name = "textBox8";
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.Name = "label44";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox9, "textBox9");
+            this.textBox9.Name = "textBox9";
+            // 
+            // label45
+            // 
+            resources.ApplyResources(this.label45, "label45");
+            this.label45.Name = "label45";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox10, "textBox10");
+            this.textBox10.Name = "textBox10";
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.Name = "label46";
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox11, "textBox11");
+            this.textBox11.Name = "textBox11";
+            // 
+            // label47
+            // 
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.Name = "label47";
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox12, "textBox12");
+            this.textBox12.Name = "textBox12";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.Name = "textBox5";
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.textBox13, "textBox13");
+            this.textBox13.Name = "textBox13";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ControlDark;
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.Name = "label48";
+            this.label48.UseCompatibleTextRendering = true;
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.Name = "label49";
+            this.label49.UseCompatibleTextRendering = true;
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.Name = "label50";
+            this.label50.UseCompatibleTextRendering = true;
             // 
             // Form1
             // 
@@ -1101,12 +1355,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
+            this.Controls.Add(this.modifyRecipePanel);
+            this.Controls.Add(this.IngListPanel);
+            this.Controls.Add(this.recipelistadd);
+            this.Controls.Add(this.modifyFavList);
             this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.WhatShouldIBrwPanel);
             this.Controls.Add(this.commentPanel);
             this.Controls.Add(this.BrowseRecipesPanel);
-            this.Controls.Add(this.IngListPanel);
-            this.Controls.Add(this.recipelistadd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1127,9 +1383,9 @@
             this.RecipeListPanel.ResumeLayout(false);
             this.RecipeListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fav_recBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.IngListPanel.ResumeLayout(false);
             this.IngListPanel.PerformLayout();
@@ -1142,6 +1398,12 @@
             this.commentPanel.PerformLayout();
             this.recipelistadd.ResumeLayout(false);
             this.recipelistadd.PerformLayout();
+            this.modifyFavList.ResumeLayout(false);
+            this.modifyFavList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.modifyRecipePanel.ResumeLayout(false);
+            this.modifyRecipePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1193,9 +1455,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recipenameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView browseDatagrid;
         private System.Windows.Forms.TextBox browseBox;
         private System.Windows.Forms.Button button1;
@@ -1267,6 +1527,35 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel modifyFavList;
+        private System.Windows.Forms.Button cancelFavEdit;
+        private System.Windows.Forms.Button proceedToEditFav;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel modifyRecipePanel;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
     }
 }
 
