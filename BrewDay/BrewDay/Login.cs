@@ -42,6 +42,16 @@ namespace BrewDay
             if(UserExist ==1)
             {
                 MessageBox.Show("Login Successful");
+               
+                //Enabled buttons 
+                this.form1.curbrewing.Enabled = true;
+                this.form1.wsibt.Enabled = true;
+                this.form1.reclist.Enabled = true;
+                this.form1.ingredi.Enabled = true;
+                this.form1.commentButton.Enabled = true;
+                this.form1.addFavoruite.Enabled = true;
+                this.form1.shopping.Enabled = true;
+                
                 this.form1.logged_in = true;
                 this.form1.setUsernameText(form1.user.get_username());
                 this.form1.changeLabelVisLogin();
