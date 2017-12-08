@@ -191,6 +191,7 @@
             this.label51 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label52 = new System.Windows.Forms.Label();
+            this.addFavoruite = new System.Windows.Forms.Button();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -898,6 +899,7 @@
             // commentPanel
             // 
             this.commentPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.commentPanel.Controls.Add(this.addFavoruite);
             this.commentPanel.Controls.Add(this.label51);
             this.commentPanel.Controls.Add(this.label13);
             this.commentPanel.Controls.Add(this.richTextBox1);
@@ -1412,6 +1414,13 @@
             resources.ApplyResources(this.label52, "label52");
             this.label52.Name = "label52";
             // 
+            // addFavoruite
+            // 
+            resources.ApplyResources(this.addFavoruite, "addFavoruite");
+            this.addFavoruite.Name = "addFavoruite";
+            this.addFavoruite.UseVisualStyleBackColor = true;
+            this.addFavoruite.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1419,14 +1428,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
+            this.Controls.Add(this.commentPanel);
+            this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.modifyRecipePanel);
             this.Controls.Add(this.IngListPanel);
             this.Controls.Add(this.recipelistadd);
             this.Controls.Add(this.modifyFavList);
             this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.WhatShouldIBrwPanel);
-            this.Controls.Add(this.commentPanel);
-            this.Controls.Add(this.BrowseRecipesPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1626,6 +1635,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button addFavoruite;
     }
 }
 

@@ -1455,7 +1455,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BrowseRecipesPanel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>3</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1542,7 +1542,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WhatShouldIBrwPanel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
     <value>217, 72</value>
@@ -1800,7 +1800,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RecipeListPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <metadata name="fav_recBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 56</value>
@@ -2634,7 +2634,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IngListPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="databaseDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>160, 17</value>
@@ -2663,6 +2663,33 @@
   <metadata name="userBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
+  <data name="addFavoruite.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addFavoruite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>993, 446</value>
+  </data>
+  <data name="addFavoruite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 31</value>
+  </data>
+  <data name="addFavoruite.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="addFavoruite.Text" xml:space="preserve">
+    <value>Add to favorites</value>
+  </data>
+  <data name="&gt;&gt;addFavoruite.Name" xml:space="preserve">
+    <value>addFavoruite</value>
+  </data>
+  <data name="&gt;&gt;addFavoruite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addFavoruite.Parent" xml:space="preserve">
+    <value>commentPanel</value>
+  </data>
+  <data name="&gt;&gt;addFavoruite.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label51.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2694,7 +2721,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2727,7 +2754,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 103</value>
@@ -2751,7 +2778,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="listBox3.Items" xml:space="preserve">
     <value>Malt:</value>
@@ -2790,7 +2817,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;listBox3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="commentButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>896, 398</value>
@@ -2814,13 +2841,13 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;commentButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1095, 417</value>
+    <value>1117, 446</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 31</value>
@@ -2841,7 +2868,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>404, 401</value>
@@ -2862,7 +2889,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2895,7 +2922,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="listBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>383, 213</value>
@@ -2916,7 +2943,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;listBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2949,7 +2976,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2982,7 +3009,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 103</value>
@@ -3003,7 +3030,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3036,7 +3063,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="recipenLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3069,7 +3096,7 @@
     <value>commentPanel</value>
   </data>
   <data name="&gt;&gt;recipenLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="commentPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -3096,7 +3123,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;commentPanel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>2</value>
   </data>
   <data name="addrecipeproceed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -3669,7 +3696,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;recipelistadd.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -3858,7 +3885,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;modifyFavList.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label50.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4443,7 +4470,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;modifyRecipePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
