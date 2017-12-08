@@ -15,7 +15,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
 
         
         public Form1()
