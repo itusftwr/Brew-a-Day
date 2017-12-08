@@ -108,6 +108,7 @@ namespace BrewDay
             adapter.Fill(table);
             browseDatagrid.DataSource = table;
 
+            shoppingCombo.Items.Clear();
             str = "SELECT [recipe_name] FROM [RECIPES];";
             cmd = new SqlCommand(str, con);
             reader = cmd.ExecuteReader();

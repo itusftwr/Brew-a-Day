@@ -118,15 +118,15 @@
             this.panel1.Controls.Add(this.Cancel);
             this.panel1.Location = new System.Drawing.Point(-6, 284);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 58);
+            this.panel1.Size = new System.Drawing.Size(393, 43);
             this.panel1.TabIndex = 14;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(198, 0);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(199, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 55);
+            this.button2.Size = new System.Drawing.Size(192, 42);
             this.button2.TabIndex = 10;
             this.button2.Text = "Sing Up";
             this.button2.UseVisualStyleBackColor = true;
@@ -135,10 +135,10 @@
             // Cancel
             // 
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Cancel.Location = new System.Drawing.Point(3, 0);
+            this.Cancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Cancel.Location = new System.Drawing.Point(2, 0);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(199, 55);
+            this.Cancel.Size = new System.Drawing.Size(199, 42);
             this.Cancel.TabIndex = 11;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.CancelButton = this.Cancel;
-            this.ClientSize = new System.Drawing.Size(384, 339);
+            this.ClientSize = new System.Drawing.Size(384, 324);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
