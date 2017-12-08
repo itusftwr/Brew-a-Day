@@ -76,6 +76,7 @@ namespace BrewDay
             modifyRecipePanel.Visible = false;
             recipelistadd.Visible = false;
             modifyFavList.Visible = false;
+            commentPanel.Visible = false;
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace BrewDay
         {
             BrowseRecipesPanel.Visible = false;
             WhatShouldIBrwPanel.Visible = true;
+            commentPanel.Visible = false;
             RecipeListPanel.Visible = false;
             IngListPanel.Visible = false;
             modifyRecipePanel.Visible = false;
@@ -165,6 +167,7 @@ namespace BrewDay
 
             BrowseRecipesPanel.Visible = false;
             WhatShouldIBrwPanel.Visible = false;
+            commentPanel.Visible = false;
             RecipeListPanel.Visible = true;
             IngListPanel.Visible = false;
             modifyRecipePanel.Visible = false;
@@ -761,6 +764,28 @@ namespace BrewDay
         private void label51_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            String str = "SELECT COUNT(*) FROM [FAV_REC] WHERE USERNAME= '" + user.get_username() + "' AND RECIPE_NAME= '" + recipenLabel.Text + "';";         //Does the recipe exist or not?
+            SqlCommand cmd = new SqlCommand(str, con);
+            int recExst = (int)cmd.ExecuteScalar();
+            if (recExst == 0)                           //If exists
+            {
+                str = "INSERT INTO [FAV_REC] ([username],[recipe_name]) VALUES ('" + user.get_username() + "' , '" + recipenLabel.Text + "');";         //Insert into fav list
+                SqlCommand cmd2 = new SqlCommand(str, con);
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Recipe succesfully added to your favorite list!");
+            }
+            else
+            {
+                MessageBox.Show("This recipe is already in your favorite list!");
+
+            }
+
+            con.Close();
         }
     }
 }
