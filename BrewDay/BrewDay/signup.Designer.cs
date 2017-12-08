@@ -65,27 +65,30 @@
             // UsernameBox
             // 
             this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernameBox.Location = new System.Drawing.Point(161, 126);
+            this.UsernameBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.UsernameBox.Location = new System.Drawing.Point(161, 123);
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(187, 13);
+            this.UsernameBox.Size = new System.Drawing.Size(187, 18);
             this.UsernameBox.TabIndex = 7;
             // 
             // password1
             // 
             this.password1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password1.Location = new System.Drawing.Point(161, 165);
+            this.password1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.password1.Location = new System.Drawing.Point(161, 162);
             this.password1.Name = "password1";
             this.password1.PasswordChar = '*';
-            this.password1.Size = new System.Drawing.Size(187, 13);
+            this.password1.Size = new System.Drawing.Size(187, 18);
             this.password1.TabIndex = 8;
             // 
             // password2
             // 
             this.password2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password2.Location = new System.Drawing.Point(161, 205);
+            this.password2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.password2.Location = new System.Drawing.Point(161, 202);
             this.password2.Name = "password2";
             this.password2.PasswordChar = '*';
-            this.password2.Size = new System.Drawing.Size(187, 13);
+            this.password2.Size = new System.Drawing.Size(187, 18);
             this.password2.TabIndex = 9;
             // 
             // label3

@@ -65,19 +65,21 @@
             // PasswordBox
             // 
             this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordBox.Location = new System.Drawing.Point(146, 139);
+            this.PasswordBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PasswordBox.Location = new System.Drawing.Point(142, 136);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(187, 13);
+            this.PasswordBox.Size = new System.Drawing.Size(187, 18);
             this.PasswordBox.TabIndex = 7;
             this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // UsernameBox
             // 
             this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernameBox.Location = new System.Drawing.Point(146, 101);
+            this.UsernameBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.UsernameBox.Location = new System.Drawing.Point(142, 98);
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(187, 13);
+            this.UsernameBox.Size = new System.Drawing.Size(187, 18);
             this.UsernameBox.TabIndex = 6;
             this.UsernameBox.TextChanged += new System.EventHandler(this.UsernameBox_TextChanged);
             // 
