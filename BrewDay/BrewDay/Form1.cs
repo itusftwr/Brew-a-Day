@@ -470,38 +470,46 @@ namespace BrewDay
 
         private void update_ingredients_Click(object sender, EventArgs e)
         {
-            con.Open();
-
-            if (user.get_ingredient_name() == "")
+            int m;
+            if (int.TryParse(maltupbox.Text, out m) && int.TryParse(hopsupbox.Text, out m) && int.TryParse(yeastsupbox.Text, out m) && int.TryParse(sugarsupbox.Text, out m) && int.TryParse(additivesupbox.Text, out m) && int.TryParse(waterupbox.Text, out m))
             {
-                user.set_ingredient_name(user.get_username());
-                String str = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ( '" + user.get_ingredient_name() + "','" + Convert.ToInt32(maltupbox.Text) + "','" + Convert.ToInt32(hopsupbox.Text) + "','" + Convert.ToInt32(yeastsupbox.Text) + "','" + Convert.ToInt32(sugarsupbox.Text) + "','" + Convert.ToInt32(additivesupbox.Text) + "','" + Convert.ToInt32(waterupbox.Text) + "');";
-                SqlCommand cmd = new SqlCommand(str, con);
-                cmd.ExecuteNonQuery();
-                str = "UPDATE [USER] SET [ingredient_name]='" + user.get_ingredient_name() + "' where[username] = '" + user.get_username() + "';";
-                cmd = new SqlCommand(str, con);
-                cmd.ExecuteNonQuery();
+                con.Open();
+
+                if (user.get_ingredient_name() == "")
+                {
+                    user.set_ingredient_name(user.get_username());
+                    String str = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ( '" + user.get_ingredient_name() + "','" + Convert.ToInt32(maltupbox.Text) + "','" + Convert.ToInt32(hopsupbox.Text) + "','" + Convert.ToInt32(yeastsupbox.Text) + "','" + Convert.ToInt32(sugarsupbox.Text) + "','" + Convert.ToInt32(additivesupbox.Text) + "','" + Convert.ToInt32(waterupbox.Text) + "');";
+                    SqlCommand cmd = new SqlCommand(str, con);
+                    cmd.ExecuteNonQuery();
+                    str = "UPDATE [USER] SET [ingredient_name]='" + user.get_ingredient_name() + "' where[username] = '" + user.get_username() + "';";
+                    cmd = new SqlCommand(str, con);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    int malt = Convert.ToInt32(maltupbox.Text) + Convert.ToInt32(maltbox.Text);
+                    int hops = Convert.ToInt32(hopsupbox.Text) + Convert.ToInt32(hopsbox.Text);
+                    int yeasts = Convert.ToInt32(yeastsupbox.Text) + Convert.ToInt32(yeastsbox.Text);
+                    int sugars = Convert.ToInt32(sugarsupbox.Text) + Convert.ToInt32(sugarsbox.Text);
+                    int additives = Convert.ToInt32(additivesupbox.Text) + Convert.ToInt32(additivesbox.Text);
+                    int water = Convert.ToInt32(waterupbox.Text) + Convert.ToInt32(waterbox.Text);
+
+                    String str = "UPDATE [INGREDIENTS] SET  [malt] ='" + malt + "', [hops] ='" + hops + "', [yeasts] ='" + yeasts + "', [sugars] ='" + sugars + "', [additives] ='" + additives + "', [water] ='" + water + "'where name ='" + user.get_ingredient_name() + "';";
+                    SqlCommand cmd = new SqlCommand(str, con);
+                    cmd.ExecuteNonQuery();
+                }
+                maltupbox.Text = "0";
+                hopsupbox.Text = "0";
+                yeastsupbox.Text = "0";
+                sugarsupbox.Text = "0";
+                additivesupbox.Text = "0";
+                waterupbox.Text = "0";
+                con.Close();
             }
             else
             {
-                int malt = Convert.ToInt32(maltupbox.Text) + Convert.ToInt32(maltbox.Text);
-                int hops = Convert.ToInt32(hopsupbox.Text) + Convert.ToInt32(hopsbox.Text);
-                int yeasts = Convert.ToInt32(yeastsupbox.Text) + Convert.ToInt32(yeastsbox.Text);
-                int sugars = Convert.ToInt32(sugarsupbox.Text) + Convert.ToInt32(sugarsbox.Text);
-                int additives = Convert.ToInt32(additivesupbox.Text) + Convert.ToInt32(additivesbox.Text);
-                int water = Convert.ToInt32(waterupbox.Text) + Convert.ToInt32(waterbox.Text);
-
-                String str = "UPDATE [INGREDIENTS] SET  [malt] ='" + malt + "', [hops] ='" + hops + "', [yeasts] ='" + yeasts + "', [sugars] ='" + sugars + "', [additives] ='" + additives + "', [water] ='" + water + "'where name ='" + user.get_ingredient_name() + "';";
-                SqlCommand cmd = new SqlCommand(str, con);
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Amounts must be numeric!!");
             }
-            maltupbox.Text = "0";
-            hopsupbox.Text = "0";
-            yeastsupbox.Text = "0";
-            sugarsupbox.Text = "0";
-            additivesupbox.Text = "0";
-            waterupbox.Text = "0";
-            con.Close();
         }
 
         private void maltbox_TextChanged(object sender, EventArgs e)

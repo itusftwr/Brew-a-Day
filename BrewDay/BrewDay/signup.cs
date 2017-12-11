@@ -34,16 +34,24 @@ namespace BrewDay
         private void button2_Click(object sender, EventArgs e)
         {
             con.Open();
-            String str = "SELECT COUNT([USERNAME]) FROM [USER] WHERE USERNAME = '" + UsernameBox.Text + "';";
+            String str = "SELECT COUNT([USERNAME]) FROM [USER] JOIN [RECIPES] ON [USER].USERNAME = '" + UsernameBox.Text + "' OR [RECIPES].RECIPE_NAME = '" + UsernameBox.Text + "';";
             SqlCommand cmd = new SqlCommand(str, con);
             int UserExist = (int)cmd.ExecuteScalar();
-            if (UserExist == 1)
+            if (UserExist > 0)
             {
                 MessageBox.Show("Username already exist");
             }
             else if (password1.Text != password2.Text)
             {
                 MessageBox.Show("Passwords must match");
+            }
+            else if (UsernameBox.Text.Length < 1)
+            {
+                MessageBox.Show("Username cannot be empty");
+            }
+            else if ((password1.Text == password2.Text) && (password1.Text).Length < 1)
+            {
+                MessageBox.Show("Password cannot be empty");
             }
             else
             {

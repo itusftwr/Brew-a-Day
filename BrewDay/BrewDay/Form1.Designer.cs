@@ -49,17 +49,13 @@
             this.curbrewing = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.login = new System.Windows.Forms.LinkLabel();
-            this.ExitIcon = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.BrowseRecipesPanel = new System.Windows.Forms.Panel();
             this.shoppingCombo = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.browseBox = new System.Windows.Forms.TextBox();
@@ -125,9 +121,6 @@
             this.ingredientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.commentPanel = new System.Windows.Forms.Panel();
-            this.shopping = new System.Windows.Forms.Button();
-            this.label52 = new System.Windows.Forms.Label();
-            this.addFavoruite = new System.Windows.Forms.Button();
             this.label51 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -192,14 +185,17 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.ExitIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.shopping = new System.Windows.Forms.Button();
+            this.addFavoruite = new System.Windows.Forms.Button();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
             this.BrowseRecipesPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).BeginInit();
             this.WhatShouldIBrwPanel.SuspendLayout();
             this.RecipeListPanel.SuspendLayout();
@@ -220,6 +216,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.modifyRecipePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoPanel
@@ -323,13 +322,6 @@
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
             // panel7
             // 
             resources.ApplyResources(this.panel7, "panel7");
@@ -361,13 +353,6 @@
             this.login.Name = "login";
             this.login.TabStop = true;
             this.login.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.login_LinkClicked);
-            // 
-            // ExitIcon
-            // 
-            resources.ApplyResources(this.ExitIcon, "ExitIcon");
-            this.ExitIcon.Name = "ExitIcon";
-            this.ExitIcon.TabStop = false;
-            this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label11
             // 
@@ -401,20 +386,6 @@
             resources.ApplyResources(this.shoppingCombo, "shoppingCombo");
             this.shoppingCombo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.shoppingCombo.Name = "shoppingCombo";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BrewDay.Properties.Resources.info_icon;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label12
             // 
@@ -908,7 +879,6 @@
             // 
             this.commentPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.commentPanel.Controls.Add(this.shopping);
-            this.commentPanel.Controls.Add(this.label52);
             this.commentPanel.Controls.Add(this.addFavoruite);
             this.commentPanel.Controls.Add(this.label51);
             this.commentPanel.Controls.Add(this.label13);
@@ -928,29 +898,6 @@
             this.commentPanel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.commentPanel.Name = "commentPanel";
             this.commentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.commentPanel_Paint);
-            // 
-            // shopping
-            // 
-            resources.ApplyResources(this.shopping, "shopping");
-            this.shopping.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.shopping.Image = global::BrewDay.Properties.Resources.basket_icon__1_;
-            this.shopping.Name = "shopping";
-            this.shopping.UseVisualStyleBackColor = true;
-            this.shopping.Click += new System.EventHandler(this.shopping_Click_1);
-            // 
-            // label52
-            // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label52.Name = "label52";
-            // 
-            // addFavoruite
-            // 
-            resources.ApplyResources(this.addFavoruite, "addFavoruite");
-            this.addFavoruite.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.addFavoruite.Name = "addFavoruite";
-            this.addFavoruite.UseVisualStyleBackColor = true;
-            this.addFavoruite.Click += new System.EventHandler(this.button7_Click);
             // 
             // label51
             // 
@@ -1219,6 +1166,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ControlDark;
             resources.ApplyResources(this.button5, "button5");
+            this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -1227,6 +1175,7 @@
             // 
             this.cancelFavEdit.BackColor = System.Drawing.SystemColors.ControlDark;
             resources.ApplyResources(this.cancelFavEdit, "cancelFavEdit");
+            this.cancelFavEdit.ForeColor = System.Drawing.SystemColors.Desktop;
             this.cancelFavEdit.Name = "cancelFavEdit";
             this.cancelFavEdit.UseVisualStyleBackColor = false;
             this.cancelFavEdit.Click += new System.EventHandler(this.cancelFavEdit_Click);
@@ -1450,6 +1399,53 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             // 
+            // ExitIcon
+            // 
+            resources.ApplyResources(this.ExitIcon, "ExitIcon");
+            this.ExitIcon.Name = "ExitIcon";
+            this.ExitIcon.TabStop = false;
+            this.ExitIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BrewDay.Properties.Resources.info_icon;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Image = global::BrewDay.Properties.Resources.search_icon;
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // shopping
+            // 
+            resources.ApplyResources(this.shopping, "shopping");
+            this.shopping.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.shopping.Image = global::BrewDay.Properties.Resources.basket_icon__1_;
+            this.shopping.Name = "shopping";
+            this.shopping.UseVisualStyleBackColor = true;
+            this.shopping.Click += new System.EventHandler(this.shopping_Click_1);
+            // 
+            // addFavoruite
+            // 
+            resources.ApplyResources(this.addFavoruite, "addFavoruite");
+            this.addFavoruite.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.addFavoruite.Image = global::BrewDay.Properties.Resources.Favorites_icon;
+            this.addFavoruite.Name = "addFavoruite";
+            this.addFavoruite.UseVisualStyleBackColor = true;
+            this.addFavoruite.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1457,27 +1453,24 @@
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
-            this.Controls.Add(this.modifyFavList);
-            this.Controls.Add(this.RecipeListPanel);
-            this.Controls.Add(this.WhatShouldIBrwPanel);
-            this.Controls.Add(this.commentPanel);
             this.Controls.Add(this.BrowseRecipesPanel);
             this.Controls.Add(this.modifyRecipePanel);
             this.Controls.Add(this.IngListPanel);
             this.Controls.Add(this.recipelistadd);
+            this.Controls.Add(this.modifyFavList);
+            this.Controls.Add(this.RecipeListPanel);
+            this.Controls.Add(this.WhatShouldIBrwPanel);
+            this.Controls.Add(this.commentPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.LogoPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
             this.BrowseRecipesPanel.ResumeLayout(false);
             this.BrowseRecipesPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.browseDatagrid)).EndInit();
             this.WhatShouldIBrwPanel.ResumeLayout(false);
             this.WhatShouldIBrwPanel.PerformLayout();
@@ -1505,6 +1498,9 @@
             this.modifyRecipePanel.ResumeLayout(false);
             this.modifyRecipePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1663,7 +1659,6 @@
         public System.Windows.Forms.Button addFavoruite;
         private System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.Button shopping;
-        private System.Windows.Forms.Label label52;
     }
 }
 
