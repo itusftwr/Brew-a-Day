@@ -39,6 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.CancelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.showPass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.showPass);
             this.panel1.Controls.Add(this.PasswordBox);
             this.panel1.Controls.Add(this.UsernameBox);
             this.panel1.Controls.Add(this.label3);
@@ -68,9 +70,9 @@
             this.PasswordBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.PasswordBox.Location = new System.Drawing.Point(142, 136);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(187, 18);
             this.PasswordBox.TabIndex = 7;
+            this.PasswordBox.UseSystemPasswordChar = true;
             this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // UsernameBox
@@ -174,6 +176,20 @@
             this.label1.TabIndex = 100;
             this.label1.Text = "Login";
             // 
+            // showPass
+            // 
+            this.showPass.BackColor = System.Drawing.Color.Transparent;
+            this.showPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.showPass.FlatAppearance.BorderSize = 0;
+            this.showPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPass.Image = global::BrewDay.Properties.Resources.Eye_2_icon;
+            this.showPass.Location = new System.Drawing.Point(335, 133);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(33, 23);
+            this.showPass.TabIndex = 101;
+            this.showPass.UseVisualStyleBackColor = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.LoginButton;
@@ -207,5 +223,6 @@
         private System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button showPass;
     }
 }

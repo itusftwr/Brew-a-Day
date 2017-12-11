@@ -74,5 +74,17 @@ namespace BrewDay
         {
 
         }
+
+        private void showPass_Click(object sender, EventArgs e)
+        {
+            if (PasswordBox.UseSystemPasswordChar)
+            {
+                PasswordBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                PasswordBox.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

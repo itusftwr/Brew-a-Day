@@ -81,5 +81,17 @@ namespace BrewDay
                 password1.UseSystemPasswordChar = true;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (password2.UseSystemPasswordChar)
+            {
+                password2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                password2.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

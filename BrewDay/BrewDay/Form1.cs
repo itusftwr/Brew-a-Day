@@ -122,6 +122,7 @@ namespace BrewDay
             BrowseRecipesPanel.Visible = true;
             WhatShouldIBrwPanel.Visible = false;
             RecipeListPanel.Visible = false;
+            commentPanel.Visible = false;
             IngListPanel.Visible = false;
             modifyRecipePanel.Visible = false;
             recipelistadd.Visible = false;
@@ -617,7 +618,7 @@ namespace BrewDay
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("This recipe name is not valid");
                     con.Close();
                     return;
                 }
