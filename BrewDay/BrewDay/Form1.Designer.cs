@@ -142,6 +142,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.recipenLabel = new System.Windows.Forms.Label();
             this.recipelistadd = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.addrecipeproceed = new System.Windows.Forms.Button();
             this.addrecipecancelbut = new System.Windows.Forms.Button();
             this.addrecipetime = new System.Windows.Forms.TextBox();
@@ -170,6 +172,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.modifyRecipePanel = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.notesBox = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -191,10 +195,6 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.notesBox = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LogoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1084,6 +1084,19 @@
             this.recipelistadd.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.recipelistadd.Name = "recipelistadd";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Cornsilk;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // label53
+            // 
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label53.Name = "label53";
+            this.label53.Click += new System.EventHandler(this.label53_Click);
+            // 
             // addrecipeproceed
             // 
             this.addrecipeproceed.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -1307,6 +1320,19 @@
             resources.ApplyResources(this.modifyRecipePanel, "modifyRecipePanel");
             this.modifyRecipePanel.Name = "modifyRecipePanel";
             // 
+            // label52
+            // 
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.ForeColor = System.Drawing.SystemColors.Info;
+            this.label52.Name = "label52";
+            this.label52.UseCompatibleTextRendering = true;
+            // 
+            // notesBox
+            // 
+            this.notesBox.BackColor = System.Drawing.SystemColors.Info;
+            resources.ApplyResources(this.notesBox, "notesBox");
+            this.notesBox.Name = "notesBox";
+            // 
             // label50
             // 
             resources.ApplyResources(this.label50, "label50");
@@ -1458,32 +1484,6 @@
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle18;
             // 
-            // notesBox
-            // 
-            this.notesBox.BackColor = System.Drawing.SystemColors.Info;
-            resources.ApplyResources(this.notesBox, "notesBox");
-            this.notesBox.Name = "notesBox";
-            // 
-            // label52
-            // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.ForeColor = System.Drawing.SystemColors.Info;
-            this.label52.Name = "label52";
-            this.label52.UseCompatibleTextRendering = true;
-            // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label53.Name = "label53";
-            this.label53.Click += new System.EventHandler(this.label53_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Cornsilk;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1491,14 +1491,14 @@
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoPanel);
-            this.Controls.Add(this.modifyRecipePanel);
-            this.Controls.Add(this.IngListPanel);
             this.Controls.Add(this.recipelistadd);
             this.Controls.Add(this.modifyFavList);
             this.Controls.Add(this.RecipeListPanel);
             this.Controls.Add(this.WhatShouldIBrwPanel);
             this.Controls.Add(this.commentPanel);
             this.Controls.Add(this.BrowseRecipesPanel);
+            this.Controls.Add(this.modifyRecipePanel);
+            this.Controls.Add(this.IngListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

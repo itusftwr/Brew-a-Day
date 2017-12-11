@@ -672,19 +672,23 @@ namespace BrewDay
                     str = "DELETE FROM fav_rec WHERE recipe_name='" + name + "' and username = '" + user.get_username() + "';";
                     SqlCommand del = new SqlCommand(str, con);
                     del.ExecuteNonQuery();
+                    con.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    con.Close();
                     return;
                 }
                 MessageBox.Show("Succesfully deleted.");
                 EventArgs x = new EventArgs();
                 modifyFavList.Visible = false;
                 reclist_Click(addrecipeproceed, x);
+                con.Close();
             }
             else
                 MessageBox.Show("The recipe is not in favorite list");
+
             con.Close();
         }
 
@@ -731,6 +735,9 @@ namespace BrewDay
             try
             {
                 con.Open();
+                String strdelfav = "DELETE FROM fav_rec WHERE recipe_name='" + textBox12.Text + "';";
+                SqlCommand favdel = new SqlCommand(strdelfav, con);
+                favdel.ExecuteNonQuery();
                 String strdel = "DELETE FROM recipes WHERE recipe_name='" + textBox12.Text + "' and creator = '" + user.get_username() + "';";
                 SqlCommand del = new SqlCommand(strdel, con);
                 del.ExecuteNonQuery();
