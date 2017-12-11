@@ -153,6 +153,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+    <None Include="Resources\Favorites-icon.png" />
+    <None Include="Resources\Eye-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -160,9 +165,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\search-icon.png" />
-    <None Include="Resources\Favorites-icon.png" />
-    <None Include="Resources\Eye-2-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

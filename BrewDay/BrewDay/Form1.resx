@@ -1368,7 +1368,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BrowseRecipesPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="shoppingCombo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1764,7 +1764,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WhatShouldIBrwPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1911,7 +1911,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RecipeListPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 71</value>
@@ -2577,7 +2577,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IngListPanel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="update_ingredients.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -3633,7 +3633,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;commentPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="shopping.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4148,6 +4148,30 @@
   <data name="&gt;&gt;recipenLabel.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>recipelistadd</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label53.Name" xml:space="preserve">
+    <value>label53</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
+    <value>recipelistadd</value>
+  </data>
+  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;addrecipeproceed.Name" xml:space="preserve">
     <value>addrecipeproceed</value>
   </data>
@@ -4158,7 +4182,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipeproceed.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;addrecipecancelbut.Name" xml:space="preserve">
     <value>addrecipecancelbut</value>
@@ -4170,7 +4194,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipecancelbut.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;addrecipetime.Name" xml:space="preserve">
     <value>addrecipetime</value>
@@ -4182,7 +4206,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipetime.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;addrecipewaterbox.Name" xml:space="preserve">
     <value>addrecipewaterbox</value>
@@ -4194,7 +4218,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipewaterbox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;addrecipeadditivebox.Name" xml:space="preserve">
     <value>addrecipeadditivebox</value>
@@ -4206,7 +4230,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipeadditivebox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;addrecipesugarbox.Name" xml:space="preserve">
     <value>addrecipesugarbox</value>
@@ -4218,7 +4242,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipesugarbox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;addrecipeyeastbox.Name" xml:space="preserve">
     <value>addrecipeyeastbox</value>
@@ -4230,7 +4254,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipeyeastbox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;addrecipehopbox.Name" xml:space="preserve">
     <value>addrecipehopbox</value>
@@ -4242,7 +4266,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipehopbox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;addrecipemaltbox.Name" xml:space="preserve">
     <value>addrecipemaltbox</value>
@@ -4254,7 +4278,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipemaltbox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;label40.Name" xml:space="preserve">
     <value>label40</value>
@@ -4266,7 +4290,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;label39.Name" xml:space="preserve">
     <value>label39</value>
@@ -4278,7 +4302,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="&gt;&gt;label38.Name" xml:space="preserve">
     <value>label38</value>
@@ -4290,7 +4314,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;label37.Name" xml:space="preserve">
     <value>label37</value>
@@ -4302,7 +4326,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;label36.Name" xml:space="preserve">
     <value>label36</value>
@@ -4314,7 +4338,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;label34.Name" xml:space="preserve">
     <value>label34</value>
@@ -4326,7 +4350,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="&gt;&gt;addrecipenamebox.Name" xml:space="preserve">
     <value>addrecipenamebox</value>
@@ -4338,7 +4362,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipenamebox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;label35.Name" xml:space="preserve">
     <value>label35</value>
@@ -4350,7 +4374,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="&gt;&gt;label33.Name" xml:space="preserve">
     <value>label33</value>
@@ -4362,7 +4386,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;label32.Name" xml:space="preserve">
     <value>label32</value>
@@ -4374,7 +4398,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;label31.Name" xml:space="preserve">
     <value>label31</value>
@@ -4386,7 +4410,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="recipelistadd.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -4413,7 +4437,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;recipelistadd.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>4</value>
   </data>
   <data name="addrecipeproceed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -4446,7 +4470,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipeproceed.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="addrecipecancelbut.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -4479,7 +4503,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipecancelbut.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="addrecipetime.Location" type="System.Drawing.Point, System.Drawing">
     <value>1086, 127</value>
@@ -4500,7 +4524,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipetime.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="addrecipewaterbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 326</value>
@@ -4521,7 +4545,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipewaterbox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="addrecipeadditivebox.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 293</value>
@@ -4542,7 +4566,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipeadditivebox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="addrecipesugarbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 261</value>
@@ -4563,7 +4587,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipesugarbox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="addrecipeyeastbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 230</value>
@@ -4584,7 +4608,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipeyeastbox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="addrecipehopbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 198</value>
@@ -4605,7 +4629,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipehopbox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="addrecipemaltbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>712, 167</value>
@@ -4626,7 +4650,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipemaltbox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label40.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4659,7 +4683,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label39.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4692,7 +4716,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4725,7 +4749,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="label37.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4758,7 +4782,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="label36.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4791,7 +4815,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="label34.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4824,7 +4848,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="addrecipenamebox.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 129</value>
@@ -4845,7 +4869,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;addrecipenamebox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="label35.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4881,7 +4905,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="label33.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4917,7 +4941,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="label32.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4953,7 +4977,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="label31.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4989,7 +5013,7 @@
     <value>recipelistadd</value>
   </data>
   <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;button5.Name" xml:space="preserve">
     <value>button5</value>
@@ -5088,7 +5112,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;modifyFavList.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -5261,6 +5285,30 @@
   <data name="&gt;&gt;dataGridView3.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;label52.Name" xml:space="preserve">
+    <value>label52</value>
+  </data>
+  <data name="&gt;&gt;label52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label52.Parent" xml:space="preserve">
+    <value>modifyRecipePanel</value>
+  </data>
+  <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;notesBox.Name" xml:space="preserve">
+    <value>notesBox</value>
+  </data>
+  <data name="&gt;&gt;notesBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notesBox.Parent" xml:space="preserve">
+    <value>modifyRecipePanel</value>
+  </data>
+  <data name="&gt;&gt;notesBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;label50.Name" xml:space="preserve">
     <value>label50</value>
   </data>
@@ -5271,7 +5319,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;label49.Name" xml:space="preserve">
     <value>label49</value>
@@ -5283,7 +5331,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label49.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;label48.Name" xml:space="preserve">
     <value>label48</value>
@@ -5295,7 +5343,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;button4.Name" xml:space="preserve">
     <value>button4</value>
@@ -5307,7 +5355,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;button6.Name" xml:space="preserve">
     <value>button6</value>
@@ -5319,7 +5367,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;textBox13.Name" xml:space="preserve">
     <value>textBox13</value>
@@ -5331,7 +5379,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox13.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
     <value>textBox5</value>
@@ -5343,7 +5391,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;textBox12.Name" xml:space="preserve">
     <value>textBox12</value>
@@ -5355,7 +5403,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox12.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
     <value>textBox6</value>
@@ -5367,7 +5415,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;label42.Name" xml:space="preserve">
     <value>label42</value>
@@ -5379,7 +5427,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
     <value>textBox7</value>
@@ -5391,7 +5439,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="&gt;&gt;label43.Name" xml:space="preserve">
     <value>label43</value>
@@ -5403,7 +5451,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
     <value>textBox8</value>
@@ -5415,7 +5463,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;label44.Name" xml:space="preserve">
     <value>label44</value>
@@ -5427,7 +5475,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;textBox9.Name" xml:space="preserve">
     <value>textBox9</value>
@@ -5439,7 +5487,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox9.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="&gt;&gt;label45.Name" xml:space="preserve">
     <value>label45</value>
@@ -5451,7 +5499,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;textBox10.Name" xml:space="preserve">
     <value>textBox10</value>
@@ -5463,7 +5511,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox10.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="&gt;&gt;label46.Name" xml:space="preserve">
     <value>label46</value>
@@ -5475,7 +5523,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;textBox11.Name" xml:space="preserve">
     <value>textBox11</value>
@@ -5487,7 +5535,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox11.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;label47.Name" xml:space="preserve">
     <value>label47</value>
@@ -5499,7 +5547,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;dataGridView4.Name" xml:space="preserve">
     <value>dataGridView4</value>
@@ -5511,7 +5559,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;dataGridView4.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="modifyRecipePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -5538,7 +5586,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;modifyRecipePanel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="label50.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5550,7 +5598,7 @@
     <value>NoControl</value>
   </data>
   <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 360</value>
+    <value>745, 283</value>
   </data>
   <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 27</value>
@@ -5571,7 +5619,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label49.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5583,7 +5631,7 @@
     <value>NoControl</value>
   </data>
   <data name="label49.Location" type="System.Drawing.Point, System.Drawing">
-    <value>745, 179</value>
+    <value>740, 102</value>
   </data>
   <data name="label49.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 25</value>
@@ -5604,7 +5652,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label49.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label48.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5616,7 +5664,7 @@
     <value>NoControl</value>
   </data>
   <data name="label48.Location" type="System.Drawing.Point, System.Drawing">
-    <value>745, 147</value>
+    <value>740, 70</value>
   </data>
   <data name="label48.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 25</value>
@@ -5637,7 +5685,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -5670,7 +5718,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="button6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -5703,10 +5751,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="textBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>828, 360</value>
+    <value>823, 283</value>
   </data>
   <data name="textBox13.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 20</value>
@@ -5724,10 +5772,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox13.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>888, 182</value>
+    <value>883, 105</value>
   </data>
   <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 20</value>
@@ -5745,10 +5793,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="textBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>888, 147</value>
+    <value>883, 70</value>
   </data>
   <data name="textBox12.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 20</value>
@@ -5766,10 +5814,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox12.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1089, 316</value>
+    <value>1084, 239</value>
   </data>
   <data name="textBox6.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -5787,7 +5835,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5799,7 +5847,7 @@
     <value>NoControl</value>
   </data>
   <data name="label42.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1012, 315</value>
+    <value>1007, 238</value>
   </data>
   <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 21</value>
@@ -5820,10 +5868,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1089, 268</value>
+    <value>1084, 191</value>
   </data>
   <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -5841,7 +5889,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label43.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5853,7 +5901,7 @@
     <value>NoControl</value>
   </data>
   <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
-    <value>998, 268</value>
+    <value>993, 191</value>
   </data>
   <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 21</value>
@@ -5874,10 +5922,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1089, 219</value>
+    <value>1084, 142</value>
   </data>
   <data name="textBox8.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -5895,7 +5943,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="label44.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5907,7 +5955,7 @@
     <value>NoControl</value>
   </data>
   <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1012, 217</value>
+    <value>1007, 140</value>
   </data>
   <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 21</value>
@@ -5928,10 +5976,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="textBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>825, 316</value>
+    <value>820, 239</value>
   </data>
   <data name="textBox9.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 20</value>
@@ -5949,7 +5997,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox9.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="label45.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5961,7 +6009,7 @@
     <value>NoControl</value>
   </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 317</value>
+    <value>745, 240</value>
   </data>
   <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 21</value>
@@ -5982,10 +6030,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="textBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>825, 269</value>
+    <value>820, 192</value>
   </data>
   <data name="textBox10.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 20</value>
@@ -6003,7 +6051,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox10.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="label46.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6015,7 +6063,7 @@
     <value>NoControl</value>
   </data>
   <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 269</value>
+    <value>745, 192</value>
   </data>
   <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 21</value>
@@ -6036,10 +6084,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="textBox11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>825, 219</value>
+    <value>820, 142</value>
   </data>
   <data name="textBox11.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 20</value>
@@ -6057,7 +6105,7 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;textBox11.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="label47.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6069,7 +6117,7 @@
     <value>NoControl</value>
   </data>
   <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 221</value>
+    <value>745, 144</value>
   </data>
   <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 21</value>
@@ -6090,10 +6138,10 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="dataGridView4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 152</value>
+    <value>227, 71</value>
   </data>
   <data name="dataGridView4.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
@@ -6114,7 +6162,130 @@
     <value>modifyRecipePanel</value>
   </data>
   <data name="&gt;&gt;dataGridView4.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
+  </data>
+  <data name="notesBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="notesBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>883, 330</value>
+  </data>
+  <data name="notesBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="notesBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 45</value>
+  </data>
+  <data name="notesBox.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;notesBox.Name" xml:space="preserve">
+    <value>notesBox</value>
+  </data>
+  <data name="&gt;&gt;notesBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notesBox.Parent" xml:space="preserve">
+    <value>modifyRecipePanel</value>
+  </data>
+  <data name="&gt;&gt;notesBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label52.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label52.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label52.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
+    <value>775, 334</value>
+  </data>
+  <data name="label52.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 27</value>
+  </data>
+  <data name="label52.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Brewer notes</value>
+  </data>
+  <data name="&gt;&gt;label52.Name" xml:space="preserve">
+    <value>label52</value>
+  </data>
+  <data name="&gt;&gt;label52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label52.Parent" xml:space="preserve">
+    <value>modifyRecipePanel</value>
+  </data>
+  <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label53.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="label53.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label53.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label53.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 203</value>
+  </data>
+  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 21</value>
+  </data>
+  <data name="label53.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Brewer notes</value>
+  </data>
+  <data name="&gt;&gt;label53.Name" xml:space="preserve">
+    <value>label53</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
+    <value>recipelistadd</value>
+  </data>
+  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 205</value>
+  </data>
+  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 54</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>recipelistadd</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

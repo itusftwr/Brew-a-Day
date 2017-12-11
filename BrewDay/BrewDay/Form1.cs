@@ -610,7 +610,7 @@ namespace BrewDay
                     String ingst = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ('" + addrecipenamebox.Text + "' , '" + Convert.ToInt32(addrecipemaltbox.Text) + "' , '" + Convert.ToInt32(addrecipehopbox.Text) + "' , '" + Convert.ToInt32(addrecipeyeastbox.Text) + "' , '" + Convert.ToInt32(addrecipesugarbox.Text) + "' , '" + Convert.ToInt32(addrecipeadditivebox.Text) + "' , '" + Convert.ToInt32(addrecipewaterbox.Text) + "');";
                     SqlCommand ing = new SqlCommand(ingst, con);
                     ing.ExecuteNonQuery();
-                    String statement = "INSERT INTO [RECIPES] ([recipe_name],[time],[ingredient_name],[creator]) VALUES ( '" + addrecipenamebox.Text + "' , '" + Convert.ToInt32(addrecipetime.Text) + "' , '" + addrecipenamebox.Text + "' , '" + user.get_username() + "');"; 
+                    String statement = "INSERT INTO [RECIPES] ([recipe_name],[time],[ingredient_name],[creator],[notes]) VALUES ( '" + addrecipenamebox.Text + "' , '" + Convert.ToInt32(addrecipetime.Text) + "' , '" + addrecipenamebox.Text + "' , '" + user.get_username() + "' , '"  + textBox1.Text + "');"; 
                     SqlCommand cmd = new SqlCommand(statement, con);
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -731,13 +731,16 @@ namespace BrewDay
             try
             {
                 con.Open();
-                String strin = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ( '" + textBox5.Text + "','" + Convert.ToInt32(textBox11.Text) + "','" + Convert.ToInt32(textBox10.Text) + "','" + Convert.ToInt32(textBox9.Text) + "','" + Convert.ToInt32(textBox8.Text) + "','" + Convert.ToInt32(textBox7.Text) + "','" + Convert.ToInt32(textBox6.Text) + "');";
-                SqlCommand cmd = new SqlCommand(strin, con);
-                cmd.ExecuteNonQuery();
                 String strdel = "DELETE FROM recipes WHERE recipe_name='" + textBox12.Text + "' and creator = '" + user.get_username() + "';";
                 SqlCommand del = new SqlCommand(strdel, con);
                 del.ExecuteNonQuery();
-                String ins = "INSERT INTO [RECIPES] ([recipe_name],[time],[ingredient_name],[creator]) VALUES ( '" + textBox5.Text + "','" + textBox13.Text + "','" + textBox5.Text + "','"+user.get_username()+"');";
+                String strdel2 = "DELETE FROM [INGREDIENTS] WHERE name='" + textBox12.Text + "';";
+                SqlCommand del2 = new SqlCommand(strdel2, con);
+                del.ExecuteNonQuery();
+                String strin = "INSERT INTO [INGREDIENTS] ([name],[malt],[hops],[yeasts],[sugars],[additives],[water]) VALUES ( '" + textBox5.Text + "','" + Convert.ToInt32(textBox11.Text) + "','" + Convert.ToInt32(textBox10.Text) + "','" + Convert.ToInt32(textBox9.Text) + "','" + Convert.ToInt32(textBox8.Text) + "','" + Convert.ToInt32(textBox7.Text) + "','" + Convert.ToInt32(textBox6.Text) + "');";
+                SqlCommand cmd = new SqlCommand(strin, con);
+                cmd.ExecuteNonQuery();
+                String ins = "INSERT INTO [RECIPES] ([recipe_name],[time],[ingredient_name],[creator],[notes]) VALUES ( '" + textBox5.Text + "','" + textBox13.Text + "','" + textBox5.Text + "','"+user.get_username()+ "','" + notesBox.Text + "');";
                 SqlCommand add = new SqlCommand(ins, con);
                 add.ExecuteNonQuery();
                 con.Close();
@@ -900,6 +903,11 @@ namespace BrewDay
             }
 
             con.Close();
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
