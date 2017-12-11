@@ -15,7 +15,7 @@ namespace BrewDay
         public User user = new User();
         public bool logged_in = false;
         Ingredients ingredient = new Ingredients();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hbara\Desktop\comment\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Yücel\Desktop\Yeni klasör\Brew-a-Day\BrewDay\BrewDay\database.mdf;Integrated Security=True; MultipleActiveResultSets = True;");
 
         
         public Form1()
@@ -380,7 +380,7 @@ namespace BrewDay
                 browseBox.ForeColor = Color.Silver;
             }
         }
-
+        /*
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (textBox1.Text == "Recipe name")
@@ -398,10 +398,10 @@ namespace BrewDay
                 textBox1.ForeColor = Color.Silver;
             }
         }
-        
+        */
         private void button2_Click(object sender, EventArgs e)
         {
-            string recipen = textBox1.Text;             //Recipe name     
+            string recipen = shoppingCombo.Text;             //Recipe name     
             con.Open();
             listBox1.Items.Clear();
             listBox2.Items.Clear();
@@ -447,8 +447,8 @@ namespace BrewDay
             else
             {
                 MessageBox.Show("Invalid recipe name");
-                textBox1.Text = "Recipe name";
-                textBox1.ForeColor = Color.Silver;
+                shoppingCombo.Text = "Recipe name";
+                shoppingCombo.ForeColor = Color.Silver;
 
             }
             con.Close();
@@ -740,7 +740,7 @@ namespace BrewDay
 
         private void commentButton_Click(object sender, EventArgs e)
         {
-            string recipen = textBox1.Text;             //Recipe name     
+            string recipen = shoppingCombo.Text;             //Recipe name     
             con.Open();
             String str = "INSERT INTO [RECIPE_COMMENT] ([recipe_name],[comment]) VALUES ('" + recipen + "' , '" + user.get_username() + ": " + textBox3.Text + "');";         //Insert comment
             SqlCommand cmd = new SqlCommand(str, con);
@@ -798,75 +798,7 @@ namespace BrewDay
 
             con.Close();
         }
-
-        private void shopping_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            string str = "SELECT * FROM [INGREDIENTS] WHERE NAME = '" + shoppingCombo.Text + "';";
-            SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataReader reader;
-            reader = cmd.ExecuteReader();
-            int malt, hops, yeasts, sugars, additives, water;
-            if (reader.Read())           //Filling comments listbox
-            {
-                //Recipe's ingredients
-                malt = Convert.ToInt32(reader["malt"]);
-                hops = Convert.ToInt32(reader["hops"]);
-                yeasts = Convert.ToInt32(reader["yeasts"]);
-                sugars = Convert.ToInt32(reader["sugars"]);
-                additives = Convert.ToInt32(reader["additives"]);
-                water = Convert.ToInt32(reader["water"]);
-        
-                str = "SELECT [malt],[hops],[yeasts],[sugars],[additives],[water] FROM [ingredients] WHERE name = '" + user.get_ingredient_name() + "';";
-                cmd = new SqlCommand(str, con);
-                reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    ingredient.add_malts(reader.GetInt32(0));
-                    ingredient.add_hops(reader.GetInt32(1));
-                    ingredient.add_yeasts(reader.GetInt32(2));
-                    ingredient.add_sugars(reader.GetInt32(3));
-                    ingredient.add_additives(reader.GetInt32(4));
-                    ingredient.add_water(reader.GetInt32(5));
-                }
-                if (malt > ingredient.get_malts() || hops > ingredient.get_hops() || yeasts > ingredient.get_yeasts() || sugars > ingredient.get_sugars() || additives > ingredient.get_additives() || water > ingredient.get_water())
-                {
-                    String slist = "Required ingredients are: \n";
-                    if(malt > ingredient.get_malts())
-                    {
-                        slist = slist + "Malt: " + (malt - ingredient.get_malts()).ToString() + "\n";
-                    }
-                    if (hops > ingredient.get_hops())
-                    {
-                        slist = slist + "Hops: " + (hops - ingredient.get_hops()).ToString() + "\n";
-                    }
-                    if (yeasts > ingredient.get_yeasts())
-                    {
-                        slist = slist + "Yeasts: " + (yeasts - ingredient.get_yeasts()).ToString() + "\n";
-                    }
-                    if (sugars > ingredient.get_sugars())
-                    {
-                        slist = slist + "Sugar: " + (sugars - ingredient.get_sugars()).ToString() + "\n";
-                    }
-                    if (additives > ingredient.get_additives())
-                    {
-                        slist = slist + "Additives: " + (additives - ingredient.get_additives()).ToString() + "\n";
-                    }
-                    if (water > ingredient.get_water())
-                    {
-                        slist = slist + "Water: " + (water - ingredient.get_water()).ToString() + "\n";
-                    }
-                    MessageBox.Show(slist);
-                }
-                else
-                {
-                    MessageBox.Show("Ingredients are enough for this recipe. Have a good brew :)");
-                }
-            }
-
-            con.Close();
-        }
-
+       
         private void waterbox_TextChanged(object sender, EventArgs e)
         {
 
@@ -880,6 +812,77 @@ namespace BrewDay
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void shopping_Click_1(object sender, EventArgs e)
+        {
+            con.Open();
+            string str = "SELECT * FROM [INGREDIENTS] WHERE NAME = '" + shoppingCombo.Text + "';";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            int malt, hops, yeasts, sugars, additives, water;
+            int umalt, uhops, uyeasts, usugars, uadditives, uwater;
+            if (reader.Read())           
+            {
+                //Recipe's ingredients
+                malt = Convert.ToInt32(reader["malt"]);
+                hops = Convert.ToInt32(reader["hops"]);
+                yeasts = Convert.ToInt32(reader["yeasts"]);
+                sugars = Convert.ToInt32(reader["sugars"]);
+                additives = Convert.ToInt32(reader["additives"]);
+                water = Convert.ToInt32(reader["water"]);
+
+                str = "SELECT * FROM [INGREDIENTS] WHERE name = '" + user.get_username() + "';";
+                cmd = new SqlCommand(str, con);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    //User's ingredients
+                    umalt = Convert.ToInt32(reader["malt"]);
+                    uhops = Convert.ToInt32(reader["hops"]);
+                    uyeasts = Convert.ToInt32(reader["yeasts"]);
+                    usugars = Convert.ToInt32(reader["sugars"]);
+                    uadditives = Convert.ToInt32(reader["additives"]);
+                    uwater = Convert.ToInt32(reader["water"]);
+
+                    if (malt > umalt || hops > uhops || yeasts > uyeasts || sugars > usugars || additives > uadditives || water > uwater)
+                    {
+                        String slist = "Required ingredients are: \n";
+                        if (malt > umalt)
+                        {
+                            slist = slist + "Malt: " + (malt - umalt).ToString() + "\n";
+                        }
+                        if (hops > uhops)
+                        {
+                            slist = slist + "Hops: " + (hops - uhops).ToString() + "\n";
+                        }
+                        if (yeasts > uyeasts)
+                        {
+                            slist = slist + "Yeasts: " + (yeasts - uyeasts).ToString() + "\n";
+                        }
+                        if (sugars > usugars)
+                        {
+                            slist = slist + "Sugar: " + (sugars - usugars).ToString() + "\n";
+                        }
+                        if (additives > uadditives)
+                        {
+                            slist = slist + "Additives: " + (additives - uadditives).ToString() + "\n";
+                        }
+                        if (water > uwater)
+                        {
+                            slist = slist + "Water: " + (water - uwater).ToString() + "\n";
+                        }
+                        MessageBox.Show(slist);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingredients are enough for this recipe. Have a good brew :)");
+                    }
+                }
+            }
+
+            con.Close();
         }
     }
 }

@@ -38,6 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
+            this.showPass = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,9 +79,9 @@
             this.password1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.password1.Location = new System.Drawing.Point(161, 162);
             this.password1.Name = "password1";
-            this.password1.PasswordChar = '*';
             this.password1.Size = new System.Drawing.Size(187, 18);
             this.password1.TabIndex = 8;
+            this.password1.UseSystemPasswordChar = true;
             // 
             // password2
             // 
@@ -144,6 +146,33 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.button1_Click);
             // 
+            // showPass
+            // 
+            this.showPass.BackColor = System.Drawing.Color.Transparent;
+            this.showPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.showPass.FlatAppearance.BorderSize = 0;
+            this.showPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPass.Image = global::BrewDay.Properties.Resources.Eye_2_icon;
+            this.showPass.Location = new System.Drawing.Point(345, 160);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(33, 23);
+            this.showPass.TabIndex = 15;
+            this.showPass.UseVisualStyleBackColor = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::BrewDay.Properties.Resources.Eye_2_icon;
+            this.button3.Location = new System.Drawing.Point(344, 200);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 23);
+            this.button3.TabIndex = 16;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // signup
             // 
             this.AcceptButton = this.button2;
@@ -153,10 +182,12 @@
             this.CancelButton = this.Cancel;
             this.ClientSize = new System.Drawing.Size(384, 324);
             this.ControlBox = false;
+            this.Controls.Add(this.password2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.password1);
+            this.Controls.Add(this.showPass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.password2);
-            this.Controls.Add(this.password1);
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -185,5 +216,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button showPass;
+        private System.Windows.Forms.Button button3;
     }
 }
