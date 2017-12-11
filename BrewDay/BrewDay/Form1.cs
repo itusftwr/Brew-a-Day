@@ -659,25 +659,33 @@ namespace BrewDay
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try
+            con.Open();
+            string recipen = textBox4.Text;
+            String str = "SELECT COUNT([recipe_name]) FROM [fav_rec] WHERE RECIPE_NAME= '" + recipen + "' AND USERNAME ='" + user.get_username() + "';";         //Does the recipe exist or not?
+            SqlCommand cmd = new SqlCommand(str, con);
+            int recExst = (int)cmd.ExecuteScalar();
+            if (recExst > 0)
             {
-                con.Open();
-                String name = textBox4.Text;
-                String str = "DELETE FROM fav_rec WHERE recipe_name='" + name + "' and username = '" + user.get_username() + "';";
-                SqlCommand del = new SqlCommand(str, con);
-                del.ExecuteNonQuery();
-                con.Close();
+                try
+                {
+                    String name = textBox4.Text;
+                    str = "DELETE FROM fav_rec WHERE recipe_name='" + name + "' and username = '" + user.get_username() + "';";
+                    SqlCommand del = new SqlCommand(str, con);
+                    del.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+                MessageBox.Show("Succesfully deleted.");
+                EventArgs x = new EventArgs();
+                modifyFavList.Visible = false;
+                reclist_Click(addrecipeproceed, x);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                con.Close();
-                return;
-            }
-            MessageBox.Show("Succesfully deleted.");
-            EventArgs x = new EventArgs();
-            modifyFavList.Visible = false;
-            reclist_Click(addrecipeproceed, x);
+            else
+                MessageBox.Show("The recipe is not in favorite list");
+            con.Close();
         }
 
         private void cancelFavEdit_Click(object sender, EventArgs e)
